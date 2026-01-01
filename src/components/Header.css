@@ -21,32 +21,27 @@
 
 /* ===== GRUPO IZQUIERDO (LOGO + LOGO-TEXTO) ===== */
 
-.left-group {
+.header-left {
   display: flex;
   align-items: center;
-  gap: 10px; /* más natural */
+  gap: 12px;
 }
 
 /* Logo cuadrado */
 .logo img {
-  height: 58px; /* un poco más grande */
+  height: 58px;
   cursor: pointer;
 }
 
 /* Logo tipográfico */
-.logo-text {
-  display: flex;
-  align-items: center;
-}
-
 .logo-text img {
-  height: 54px; /* equilibrado con el logo cuadrado */
+  height: 48px; /* Ajustado para que NO se caiga visualmente */
   object-fit: contain;
 }
 
 /* ===== TELÉFONO ===== */
 
-.phone a {
+.header-right .phone-btn {
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
@@ -57,7 +52,7 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-.phone a:hover {
+.header-right .phone-btn:hover {
   background: #0c7af5;
 }
 
@@ -99,10 +94,10 @@
   }
 
   .logo-text img {
-    height: 44px;
+    height: 40px;
   }
 
-  .phone a {
+  .header-right .phone-btn {
     font-size: 15px;
     padding: 6px 12px;
   }

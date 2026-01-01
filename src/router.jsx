@@ -6,7 +6,7 @@ import DosHermanas from "./pages/DosHermanas";
 import LosRemedios from "./pages/LosRemedios";
 import SevillaEste from "./pages/SevillaEste";
 import Triana from "./pages/Triana";
-import Inicio from "./pages/inicio";
+import Inicio from "./pages/Inicio";
 
 import AvisoLegal from "./pages/AvisoLegal";
 import Privacidad from "./pages/Privacidad";

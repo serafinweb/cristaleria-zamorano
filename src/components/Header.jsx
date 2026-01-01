@@ -11,7 +11,6 @@ const Header = () => {
   const handleMouseEnter = () => setOpen(true);
 
   const handleMouseLeave = (e) => {
-    // Evita que se cierre cuando el ratón pasa del logo al menú
     if (menuRef.current && !menuRef.current.contains(e.relatedTarget)) {
       setOpen(false);
     }
@@ -19,53 +18,49 @@ const Header = () => {
 
   return (
     <header className="header">
+
+      {/* CONTENEDOR PRINCIPAL */}
       <div className="header-container">
 
-        {/* Grupo izquierdo: Logo cuadrado + Logo tipográfico */}
-        <div className="left-group">
+        {/* IZQUIERDA: logo + logotipo */}
+        <div className="header-left">
 
-          {/* Logo cuadrado con menú flotante */}
           <div
             className="logo"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            onClick={() => setOpen(!open)} // móvil
+            onClick={() => setOpen(!open)}
           >
             <img src={logo} alt="Cristalería Zamorano" />
           </div>
 
-          {/* Logo tipográfico (CRISTALERÍA / ZAMORANO) */}
           <div className="logo-text">
             <img src={logoTipografico} alt="Cristalería Zamorano" />
           </div>
 
         </div>
 
-        {/* Teléfono a la derecha */}
-        <div className="phone">
-          <a href="tel:+34955631356">955 631 356</a>
+        {/* DERECHA: teléfono */}
+        <div className="header-right">
+          <a href="tel:+34955631356" className="phone-btn">
+            955 631 356
+          </a>
         </div>
 
-        {/* Menú flotante */}
-        {open && (
-          <div
-            className="menu-flotante"
-            ref={menuRef}
-            onMouseLeave={() => setOpen(false)}
-          >
-            <Link to="/">Inicio</Link>
-            <Link to="/servicios">Servicios</Link>
-
-            {/* Barrios ocultos (solo para Google) */}
-            {/* <Link to="/triana">Triana</Link> */}
-            {/* <Link to="/los-remedios">Los Remedios</Link> */}
-            {/* <Link to="/sevilla-este">Sevilla Este</Link> */}
-            {/* <Link to="/dos-hermanas">Dos Hermanas</Link> */}
-            {/* <Link to="/camas">Camas</Link> */}
-          </div>
-        )}
-
       </div>
+
+      {/* MENÚ FLOTANTE — FUERA DEL CONTENEDOR */}
+      {open && (
+        <div
+          className="menu-flotante"
+          ref={menuRef}
+          onMouseLeave={() => setOpen(false)}
+        >
+          <Link to="/">Inicio</Link>
+          <Link to="/servicios">Servicios</Link>
+        </div>
+      )}
+
     </header>
   );
 };

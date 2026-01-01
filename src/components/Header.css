@@ -24,7 +24,7 @@
 .header-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px; /* ← AJUSTE EXACTO QUE PEDISTE */
 }
 
 /* Logo cuadrado */
@@ -35,7 +35,7 @@
 
 /* Logo tipográfico */
 .logo-text img {
-  height: 48px; /* Ajustado para que NO se caiga visualmente */
+  height: 48px; /* equilibrado con el logo cuadrado */
   object-fit: contain;
 }
 

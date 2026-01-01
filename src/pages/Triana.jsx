@@ -1,7 +1,7 @@
 import React from "react";
 import "./Triana.css";
-import heroTriana from "../assets/triana/hero-triana.png";
-import trabajoCristal from "../assets/triana/cristaleria-trabajo.png";
+import heroTriana from "../assets/Triana/hero-triana.png";
+import trabajoCristal from "../assets/Triana/cristaleria-trabajo.png";
 import Services from "../components/Services";
 
 export default function Triana() {

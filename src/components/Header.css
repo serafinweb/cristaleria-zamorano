@@ -8,10 +8,9 @@
   z-index: 100;
 }
 
-/* Contenedor centrado y alineado */
+/* Contenedor alineado a los bordes (NO centrado) */
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   padding: 0 20px;
 
   display: flex;
@@ -24,7 +23,7 @@
 .header-left {
   display: flex;
   align-items: center;
-  gap: 4px; /* ← AJUSTE EXACTO QUE PEDISTE */
+  gap: 4px; /* separación exacta entre logos */
 }
 
 /* Logo cuadrado */
@@ -35,7 +34,7 @@
 
 /* Logo tipográfico */
 .logo-text img {
-  height: 48px; /* equilibrado con el logo cuadrado */
+  height: 48px;
   object-fit: contain;
 }
 
@@ -102,3 +101,4 @@
     padding: 6px 12px;
   }
 }
+

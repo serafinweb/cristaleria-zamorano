@@ -1,7 +1,7 @@
 import React from "react";
 import "./DosHermanas.css";
-import heroDosHermanas from "../assets/DosHermanas/hero-doshermanas.PNG";
-import trabajoCristal from "../assets/DosHermanas/cristaleria-trabajo.PNG";
+import heroDosHermanas from "../assets/DosHermanas/hero-doshermanas.png";
+import trabajoCristal from "../assets/DosHermanas/cristaleria-trabajo.png";
 import Services from "../components/Services";
 
 export default function DosHermanas() {

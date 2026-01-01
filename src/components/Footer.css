@@ -1,0 +1,59 @@
+footer.footer {
+  margin-top: 40px;
+  padding: 25px 20px;
+  background: #075196;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* IZQUIERDA */
+.footer-left p {
+  margin: 0;
+  color: #ffffff !important; /* blanco */
+  font-size: 0.9rem;
+}
+
+/* CENTRO */
+.footer-center {
+  display: flex;
+  gap: 20px;
+}
+
+/* ENLACES EN AZUL CELESTE */
+.footer-center a {
+  color: #b7dcff !important; /* azul celeste */
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer-center a:hover {
+  opacity: 0.8;
+  color: #e6f3ff !important; /* celeste más claro */
+}
+
+/* DERECHA */
+.footer-horario {
+  margin: 0;
+  color: #ffffff !important; /* blanco */
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  footer.footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-center {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,431 @@
+/* FONDO GENERAL */
+body {
+  background: linear-gradient(to bottom, #eaf4ff, #ffffff);
+  font-family: Arial, sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* HERO */
+.hero-losremedios {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.hero-losremedios img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-losremedios::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(7, 81, 150, 0.45);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+/* TÍTULO HERO — GRANDE + FADE-IN + DEGRADADO */
+.hero-text h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* Fade-in premium */
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
+}
+
+.fade-in-sub {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.25s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Degradado premium */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #e8f1ff 35%, #bcd7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+/* BOTONES HERO */
+.hero-botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Animación escalonada de botones */
+.fade-in-btn {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fade-in-btn:nth-child(1) { animation-delay: 0.4s; }
+.fade-in-btn:nth-child(2) { animation-delay: 0.55s; }
+
+.hero-whatsapp {
+  background: #25d366;
+}
+
+.hero-subtext {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #eaf4ff;
+  opacity: 0.9;
+}
+
+/* CONTENIDO PRINCIPAL */
+.page-content {
+  margin: 30px 0;
+}
+
+.page-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #075196;
+}
+
+.page-content p {
+  text-align: left;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* CTA + IMAGEN */
+.cta-imagen {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.cta-titulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #075196;
+  margin-bottom: 30px;
+}
+
+.cta-imagen-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.cta-imagen-texto {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-imagen-texto p {
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* BOTONES CTA */
+.cta-botones {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* IMAGEN CTA */
+.cta-imagen-foto img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+
+  opacity: 0;
+  transform: scale(0.96);
+  animation: fadeInScale 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* BENEFICIOS */
+.beneficios {
+  margin: 30px 0 40px;
+}
+
+.beneficios ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.beneficios li {
+  background: #f5faff;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border-left: 4px solid #075196;
+  color: #222;
+
+  position: relative;
+  padding-left: 32px;
+}
+
+.beneficios li::before {
+  content: "✔";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #075196;
+  font-weight: bold;
+}
+
+/* MÉTRICAS */
+.metricas-finales {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.metricas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  text-align: center;
+}
+
+.metrica {
+  background: linear-gradient(135deg, #f7fbff, #eef6ff);
+  padding: 18px 15px;
+  border-radius: 8px;
+  border: 1px solid #d6e6ff;
+  box-shadow: 0 2px 6px rgba(0, 120, 255, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metrica:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 120, 255, 0.15);
+}
+
+.metrica h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #075196;
+  margin-bottom: 6px;
+}
+
+.metrica p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .metricas-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .metrica h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* SECCIÓN FINAL — CONTACTO */
+.cierre-contacto {
+  margin: 10px 0 20px;
+  padding: 16px 20px;
+  text-align: center;
+  background: #f7fbff;
+  border: 1px solid #d6e6ff;
+  border-radius: 8px;
+}
+
+.cierre-contacto p {
+  font-size: 1rem;
+  color: #075196;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cierre-contacto .correo-destacado {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #0078ff;
+  font-weight: 700;
+  margin: 6px 0;
+  text-decoration: none;
+}
+
+.cierre-contacto .correo-destacado:hover {
+  text-decoration: underline;
+}
+
+/* BOTONES GENERALES */
+.btn {
+  background: #0078ff;
+  color: white !important;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover:not(.whatsapp) {
+  background: linear-gradient(135deg, #4da8ff, #0078ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 120, 255, 0.25);
+}
+
+.btn.whatsapp {
+  background: #25d366;
+  color: white !important;
+}
+
+.btn.whatsapp:hover {
+  background: linear-gradient(135deg, #5ff28a, #25d366);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.25);
+}
+
+/* RESPONSIVE — ORDEN CORREGIDO */
+@media (max-width: 768px) {
+  .hero-losremedios {
+    height: 300px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .cta-imagen-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cta-imagen-foto {
+    order: 1;
+    margin-top: 10px;
+  }
+
+  .cta-imagen-texto {
+    order: 2;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .cta-botones {
+    justify-content: center;
+  }
+
+  .cta-imagen-foto img {
+    max-height: 260px;
+  }
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 30px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  border-radius: 0 0 10px 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+  color: #444;
+}
+
+.footer-horario {
+  margin: 0;
+  color: #444;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .footer-horario {
+    text-align: center;
+  }
+}

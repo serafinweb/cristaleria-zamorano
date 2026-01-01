@@ -1,0 +1,54 @@
+/* ===== SECCIÓN SERVICIOS ===== */
+
+.servicios {
+  padding: 20px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+/* Eliminamos el título por si acaso */
+.servicios h2 {
+  display: none;
+}
+
+/* ===== GRID ===== */
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .grid-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== ITEM SERVICIO ===== */
+
+.item-servicio {
+  background: white;
+  padding: 20px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.item-servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.item-servicio img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.item-servicio p {
+  font-size: 14px;
+  color: #075196;
+  font-weight: 500;
+}

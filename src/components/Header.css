@@ -1,0 +1,126 @@
+/* ===== HEADER BASE ===== */
+
+.header {
+  background: #075196;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding: 10px 0;
+  position: relative;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== GRUPO IZQUIERDO (LOGO + LOGO-TEXTO + INICIO) ===== */
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* casi pegado */
+}
+
+/* Logo cuadrado */
+.logo img {
+  height: 55px;
+  cursor: pointer;
+}
+
+/* Logo tipográfico */
+.logo-text {
+  display: flex;
+  align-items: center;
+  margin-left: -2px; /* ajusta visualmente el espacio */
+}
+
+.logo-text img {
+  height: 60px; /* más protagonista */
+  object-fit: contain;
+}
+
+/* ===== ENLACE INICIO ===== */
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.nav a:hover {
+  color: #bcdcff;
+}
+
+/* ===== TELÉFONO ===== */
+
+.phone a {
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  background: #0a6ad1;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.phone a:hover {
+  background: #0c7af5;
+}
+
+/* ===== MENÚ FLOTANTE ===== */
+
+.menu-flotante {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.menu-flotante a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-flotante a:hover {
+  color: #0077cc;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+  }
+
+  .left-group {
+    gap: 6px;
+  }
+
+  .logo img {
+    height: 48px;
+  }
+
+  .logo-text img {
+    height: 52px;
+  }
+
+  .phone a {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+}

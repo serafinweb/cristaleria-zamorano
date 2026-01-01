@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo-cz.png';
-import logoTipografico from '../assets/logo-tipografico.png';
+import logoTipografico from '../assets/logo-tipografico.PNG';
 import './Header.css';
 
 const Header = () => {

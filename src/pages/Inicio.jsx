@@ -1,7 +1,7 @@
 import React from "react";
 import "./Inicio.css";
-import heroSevilla from "../assets/sevilla/hero-sevilla.png";
-import trabajoCristal from "../assets/sevilla/trabajo-cristal.png";
+import heroSevilla from "../assets/Sevilla/hero-sevilla.png";
+import trabajoCristal from "../assets/Sevilla/trabajo-cristal.png";
 import Services from "../components/Services";
 
 export default function Inicio() {

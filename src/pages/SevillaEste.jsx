@@ -1,7 +1,7 @@
 import React from "react";
 import "./SevillaEste.css";
-import heroSevillaEste from "../assets/sevilla-este/hero-sevilla-este.png";
-import trabajoCristal from "../assets/sevilla-este/cristaleria-trabajo.png";
+import heroSevillaEste from "../assets/Sevilla-Este/hero-sevilla-este.png";
+import trabajoCristal from "../assets/Sevilla-Este/cristaleria-trabajo.png";
 import Services from "../components/Services";
 
 export default function SevillaEste() {

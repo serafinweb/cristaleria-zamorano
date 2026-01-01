@@ -1,7 +1,7 @@
 import React from "react";
 import "./Camas.css";
-import heroCamas from "../assets/camas/hero-camas.png";
-import trabajoCristal from "../assets/camas/cristaleria-trabajo.png";
+import heroCamas from "../assets/Camas/hero-camas.png";
+import trabajoCristal from "../assets/Camas/cristaleria-trabajo.png";
 import Services from "../components/Services";
 
 export default function Camas() {

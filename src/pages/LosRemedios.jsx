@@ -1,7 +1,7 @@
 import React from "react";
 import "./LosRemedios.css";
-import heroLosRemedios from "../assets/Los-Remedios/hero-los-remedios.PNG";
-import trabajoCristal from "../assets/Los-Remedios/cristaleria-trabajo.PNG";
+import heroLosRemedios from "../assets/Los-Remedios/hero-los-remedios.png";
+import trabajoCristal from "../assets/Los-Remedios/cristaleria-trabajo.png";
 import Services from "../components/Services";
 
 export default function LosRemedios() {

@@ -8,6 +8,7 @@
   z-index: 100;
 }
 
+/* Contenedor centrado y alineado */
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -18,17 +19,17 @@
   justify-content: space-between;
 }
 
-/* ===== GRUPO IZQUIERDO (LOGO + LOGO-TEXTO + INICIO) ===== */
+/* ===== GRUPO IZQUIERDO (LOGO + LOGO-TEXTO) ===== */
 
 .left-group {
   display: flex;
   align-items: center;
-  gap: 4px; /* casi pegado */
+  gap: 10px; /* más natural */
 }
 
 /* Logo cuadrado */
 .logo img {
-  height: 55px;
+  height: 58px; /* un poco más grande */
   cursor: pointer;
 }
 
@@ -36,26 +37,11 @@
 .logo-text {
   display: flex;
   align-items: center;
-  margin-left: -2px; /* ajusta visualmente el espacio */
 }
 
 .logo-text img {
-  height: 60px; /* más protagonista */
+  height: 54px; /* equilibrado con el logo cuadrado */
   object-fit: contain;
-}
-
-/* ===== ENLACE INICIO ===== */
-
-.nav a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 16px;
-  margin-left: 8px;
-}
-
-.nav a:hover {
-  color: #bcdcff;
 }
 
 /* ===== TELÉFONO ===== */
@@ -66,8 +52,9 @@
   text-decoration: none;
   font-size: 18px;
   background: #0a6ad1;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .phone a:hover {
@@ -107,20 +94,16 @@
     padding: 0 15px;
   }
 
-  .left-group {
-    gap: 6px;
-  }
-
   .logo img {
     height: 48px;
   }
 
   .logo-text img {
-    height: 52px;
+    height: 44px;
   }
 
   .phone a {
-    font-size: 16px;
+    font-size: 15px;
     padding: 6px 12px;
   }
 }

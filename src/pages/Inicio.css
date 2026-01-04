@@ -211,6 +211,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  margin-bottom: 25px; /* separación extra entre mapa y métricas */
 }
 
 /* MAPA */
@@ -257,7 +258,7 @@
 }
 
 /* ========================= */
-/* MÉTRICAS A TODO EL ANCHO */
+/* MÉTRICAS */
 /* ========================= */
 
 .metricas-full {
@@ -296,10 +297,43 @@
   line-height: 1.7;
 }
 
+.cierre-contacto p {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .correo-destacado {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+  font-size: 0.85rem;
   color: #075196;
   font-weight: 700;
   text-decoration: none;
+}
+
+/* ========================= */
+/* FOOTER LEGAL */
+/* ========================= */
+
+.footer-legal {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.footer-legal a {
+  color: #075196;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
 }
 
 /* ========================= */

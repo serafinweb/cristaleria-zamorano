@@ -308,17 +308,33 @@
   margin: 0 auto;
 }
 
+/* TEXTO ESCRITORIO */
+.texto-desktop {
+  display: block;
+}
+
+/* TEXTO MÓVIL (oculto por defecto) */
+.texto-mobile {
+  display: none;
+}
+
+/* Botón móvil oculto en escritorio */
+.correo-mobile {
+  display: none;
+}
+
+/* Correo escritorio */
 .correo-destacado {
   max-width: 100%;
   display: inline-block;
-  font-size: 0.78rem; /* tamaño perfecto para móvil */
+  font-size: 0.85rem;
   color: #075196;
   font-weight: 700;
   text-decoration: none;
 
-  white-space: normal;      /* evita cortes raros */
-  overflow-wrap: anywhere;  /* permite saltos limpios */
-  word-break: normal;       /* NO partir palabras */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 /* ========================= */
@@ -340,6 +356,36 @@
 
   .mapa-cuadro iframe {
     height: 260px;
+  }
+}
+
+/* ========================= */
+/* MÓVIL */
+/* ========================= */
+@media (max-width: 600px) {
+
+  .texto-desktop {
+    display: none;
+  }
+
+  .texto-mobile {
+    display: block;
+  }
+
+  .correo-mobile {
+    display: inline-block;
+    margin-top: 10px;
+    background: #075196;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .correo-mobile:hover {
+    background: #063f75;
   }
 }
 

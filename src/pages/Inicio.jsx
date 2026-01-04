@@ -147,7 +147,9 @@ export default function Inicio() {
 
       {/* CONTACTO FINAL */}
       <section className="cierre-contacto">
-        <p>
+
+        {/* TEXTO ESCRITORIO */}
+        <p className="texto-desktop">
           Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
           <a href="mailto:cristaleria@cristaleriazamorano.com" className="correo-destacado">
             cristaleria@cristaleriazamorano.com
@@ -155,6 +157,20 @@ export default function Inicio() {
           <br />
           y te responderemos a la mayor brevedad posible.
         </p>
+
+        {/* TEXTO MÓVIL */}
+        <p className="texto-mobile">
+          Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos por e-mail.<br />
+          <a 
+            href="mailto:cristaleria@cristaleriazamorano.com" 
+            className="btn correo-mobile"
+          >
+            Enviar correo
+          </a>
+          <br />
+          Te responderemos a la mayor brevedad posible.
+        </p>
+
       </section>
 
     </div>

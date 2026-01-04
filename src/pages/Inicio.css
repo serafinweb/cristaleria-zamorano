@@ -256,7 +256,7 @@
 .beneficios li {
   background: white;
   padding: 12px 26px;
-  padding-left: 36px; /* ← más separación entre tick y texto */
+  padding-left: 42px; /* separación real del tick */
   border-radius: 6px;
   border-left: 4px solid #075196;
   font-size: 1rem;
@@ -311,11 +311,14 @@
 .correo-destacado {
   max-width: 100%;
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.78rem; /* tamaño perfecto para móvil */
   color: #075196;
   font-weight: 700;
   text-decoration: none;
-  word-break: break-word;
+
+  white-space: normal;      /* evita cortes raros */
+  overflow-wrap: anywhere;  /* permite saltos limpios */
+  word-break: normal;       /* NO partir palabras */
 }
 
 /* ========================= */
@@ -337,12 +340,6 @@
 
   .mapa-cuadro iframe {
     height: 260px;
-  }
-}
-
-@media (max-width: 400px) {
-  .correo-destacado {
-    font-size: 0.75rem; /* ← más pequeño para que no se corte */
   }
 }
 

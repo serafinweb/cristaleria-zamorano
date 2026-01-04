@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  overflow-x: hidden; /* seguridad extra ante desbordes */
+  overflow-x: hidden;
 }
 
 /* ========================= */
@@ -49,7 +49,7 @@
 
 .fade-in-sub {
   opacity: 0;
-  animation: FadeIn 1.4s ease forwards;
+  animation: fadeIn 1.4s ease forwards;
 }
 
 .fade-in-btn {
@@ -256,6 +256,7 @@
 .beneficios li {
   background: white;
   padding: 12px 26px;
+  padding-left: 36px; /* ← más separación entre tick y texto */
   border-radius: 6px;
   border-left: 4px solid #075196;
   font-size: 1rem;
@@ -308,7 +309,6 @@
 }
 
 .correo-destacado {
-  /* antes había un white-space: nowrap que reventaba el layout */
   max-width: 100%;
   display: inline-block;
   font-size: 0.85rem;
@@ -340,10 +340,9 @@
   }
 }
 
-/* ajuste fino solo para móviles muy pequeños si quieres apurar más */
 @media (max-width: 400px) {
   .correo-destacado {
-    font-size: 0.8rem;
+    font-size: 0.75rem; /* ← más pequeño para que no se corte */
   }
 }
 

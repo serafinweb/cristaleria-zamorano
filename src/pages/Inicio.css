@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  overflow-x: hidden; /* ← evita que se salga en móvil */
+  overflow-x: hidden; /* seguridad extra ante desbordes */
 }
 
 /* ========================= */
@@ -49,7 +49,7 @@
 
 .fade-in-sub {
   opacity: 0;
-  animation: fadeIn 1.4s ease forwards;
+  animation: FadeIn 1.4s ease forwards;
 }
 
 .fade-in-btn {
@@ -308,15 +308,14 @@
 }
 
 .correo-destacado {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* antes había un white-space: nowrap que reventaba el layout */
   max-width: 100%;
   display: inline-block;
   font-size: 0.85rem;
   color: #075196;
   font-weight: 700;
   text-decoration: none;
+  word-break: break-word;
 }
 
 /* ========================= */
@@ -338,6 +337,13 @@
 
   .mapa-cuadro iframe {
     height: 260px;
+  }
+}
+
+/* ajuste fino solo para móviles muy pequeños si quieres apurar más */
+@media (max-width: 400px) {
+  .correo-destacado {
+    font-size: 0.8rem;
   }
 }
 

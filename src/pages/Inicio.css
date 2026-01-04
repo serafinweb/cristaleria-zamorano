@@ -304,7 +304,7 @@
 }
 
 .cierre-contacto p {
-  max-width: 100%;
+  max-width: 700px; /* encuadre más ancho y limpio */
   margin: 0 auto;
 }
 
@@ -335,6 +335,12 @@
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: normal;
+}
+
+/* Espacio debajo del botón móvil */
+.correo-respuesta {
+  display: block;
+  margin-top: 12px;
 }
 
 /* ========================= */

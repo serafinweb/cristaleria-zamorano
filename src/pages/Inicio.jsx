@@ -1,167 +1,417 @@
-import React from "react";
-import "./Inicio.css";
-import heroSevilla from "../assets/Sevilla/hero-sevilla.png";
-import trabajoCristal from "../assets/Sevilla/trabajo-cristal.png";
-import Services from "../components/Services";
-
-export default function Inicio() {
-  return (
-    <div className="page">
-
-      {/* HERO */}
-      <div className="hero-sevilla">
-        <img src={heroSevilla} alt="Cristalería en Sevilla" />
-        <div className="hero-text">
-          <h1 className="fade-in text-gradient">Cristalería en Sevilla</h1>
-          <p className="fade-in-sub">Servicio urgente · Presupuesto en 24h</p>
-
-          <div className="hero-botones">
-            <a href="tel:+34955631356" className="btn hero-btn fade-in-btn">
-              ¡Llama ahora!
-            </a>
-            <a
-              href="https://wa.me/34659521144"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn whatsapp hero-whatsapp fade-in-btn"
-            >
-              WhatsApp
-            </a>
-          </div>
-
-          <small className="hero-subtext">
-            te atendemos en menos de 5 minutos
-          </small>
-        </div>
-      </div>
-
-      {/* CONTENIDO PRINCIPAL */}
-      <section className="page-content">
-        <h2>Expertos en cristalería en Sevilla</h2>
-        <p>
-          Ofrecemos servicio profesional de cristalería en toda Sevilla capital:
-          Triana, Los Remedios, Nervión, Macarena, Sevilla Este, Bellavista,
-          San Jerónimo, La Cartuja y todos los barrios cercanos. Instalamos
-          cristales a medida, espejos, mamparas, ventanas de aluminio y
-          realizamos reparaciones urgentes con atención rápida y personalizada.
-        </p>
-      </section>
-
-      {/* SERVICIOS */}
-      <Services />
-
-      {/* CTA + IMAGEN */}
-      <section className="cta-imagen">
-        <h3 className="cta-titulo">¿Necesitas un cristal urgente en Sevilla?</h3>
-
-        <div className="cta-imagen-grid">
-          <div className="cta-imagen-texto">
-            <p>Estamos disponibles para atenderte ahora mismo.</p>
-            <p>
-              Somos especialistas en cristales a medida, ofreciendo soluciones
-              de vidrio que combinan diseño, seguridad y funcionalidad.
-              Transformamos tu hogar o negocio con materiales de primera calidad
-              y acabados impecables.
-            </p>
-
-            <div className="cta-botones">
-              <a href="tel:+34955631356" className="btn">Llamar ahora</a>
-              <a
-                href="https://wa.me/34659521144"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn whatsapp"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div className="cta-imagen-foto">
-            <img src={trabajoCristal} alt="Trabajo de cristalería en Sevilla" />
-          </div>
-        </div>
-      </section>
-
-      {/* BLOQUE AZUL CLARO — MAPA + BENEFICIOS + MÉTRICAS */}
-      <div className="seccion-azul">
-
-        {/* MAPA + BENEFICIOS */}
-        <section className="seccion-final">
-          <div className="grid-final">
-
-            {/* IZQUIERDA — MAPA */}
-            <div className="mapa-cuadro">
-              <h3>¿Dónde estamos?</h3>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.833097932983!2d-5.987684523556016!3d37.37788527207871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126e9e6f4adc19%3A0x2a61b6a8ff90eb1a!2sCristaler%C3%ADa%20Zamorano!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-
-            {/* DERECHA — BENEFICIOS */}
-            <div className="beneficios">
-              <ul>
-                <li>Atención inmediata en toda Sevilla capital</li>
-                <li>Instalación profesional de cristales, espejos y mamparas</li>
-                <li>Reparaciones urgentes con desplazamiento rápido</li>
-                <li>Materiales de alta calidad y acabados impecables</li>
-                <li>Presupuesto en menos de 24 horas</li>
-              </ul>
-            </div>
-
-          </div>
-        </section>
-
-        {/* MÉTRICAS */}
-        <section className="metricas-full">
-          <div className="metricas-grid">
-            <div className="metrica">
-              <h3>+30 Años de Experiencia</h3>
-              <p>Trayectoria consolidada en cristalería profesional</p>
-            </div>
-            <div className="metrica">
-              <h3>+100k Montajes Completados</h3>
-              <p>Instalaciones realizadas en hogares y negocios</p>
-            </div>
-            <div className="metrica">
-              <h3>7 Premios por Calidad</h3>
-              <p>Reconocimientos por excelencia en producto y servicio</p>
-            </div>
-          </div>
-        </section>
-
-      </div> {/* ← FIN SECCIÓN AZUL */}
-
-      {/* CONTACTO FINAL */}
-      <section className="cierre-contacto">
-        <p className="texto-desktop">
-          Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
-          <a href="mailto:cristaleria@cristaleriazamorano.com" className="correo-destacado">
-            cristaleria@cristaleriazamorano.com
-          </a>
-          <br />
-          y te responderemos a la mayor brevedad posible.
-        </p>
-
-        <p className="texto-mobile">
-          Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
-          <a 
-            href="mailto:cristaleria@cristaleriazamorano.com" 
-            className="btn correo-mobile"
-          >
-            Enviar correo
-          </a>
-          <br />
-          <span className="correo-respuesta">Te responderemos a la mayor brevedad posible.</span>
-        </p>
-      </section>
-
-    </div>
-  );
+/* CONTENEDOR GENERAL */
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-x: hidden;
 }
+
+/* ========================= */
+/* HERO SEVILLA */
+/* ========================= */
+
+.hero-sevilla {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+}
+
+.hero-sevilla img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 700px;
+  padding: 0 10px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ffffff, #d9eaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.fade-in-sub {
+  opacity: 0;
+  animation: fadeIn 1.4s ease forwards;
+}
+
+.fade-in-btn {
+  opacity: 0;
+  animation: fadeIn 1.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-botones {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-btn,
+.hero-whatsapp {
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.hero-btn {
+  background: #075196;
+  color: white;
+}
+
+.hero-btn:hover {
+  background: #063f75;
+}
+
+.hero-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.hero-whatsapp:hover {
+  background: #1ebe5a;
+}
+
+.hero-subtext {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* ========================= */
+/* CONTENIDO PRINCIPAL */
+/* ========================= */
+
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-content h2 {
+  color: #075196;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.page-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* ========================= */
+/* CTA + IMAGEN */
+/* ========================= */
+
+.cta-imagen {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cta-titulo {
+  text-align: center;
+  color: #075196;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+}
+
+.cta-imagen-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.cta-imagen-texto p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.cta-botones {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.cta-botones .btn {
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: #075196;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.cta-botones .btn:hover {
+  background: #063f75;
+}
+
+.cta-botones .whatsapp {
+  background: #25d366;
+}
+
+.cta-botones .whatsapp:hover {
+  background: #1ebe5a;
+}
+
+.cta-imagen-foto img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 380px;
+}
+
+/* ========================= */
+/* BLOQUE AZUL CLARO */
+/* ========================= */
+
+.seccion-azul {
+  background: #f3f8ff;
+  padding: 40px 0;
+}
+
+/* ========================= */
+/* MAPA + BENEFICIOS */
+/* ========================= */
+
+.seccion-final {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.grid-final {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+/* MAPA */
+.mapa-cuadro {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapa-cuadro h3 {
+  margin-bottom: 15px;
+  color: #075196;
+  font-size: 1.4rem;
+}
+
+.mapa-cuadro iframe {
+  flex: 1;
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  max-width: 100%;
+  display: block;
+}
+
+/* BENEFICIOS */
+.beneficios ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.beneficios li {
+  background: white;
+  padding: 12px 26px;
+  padding-left: 42px;
+  border-radius: 6px;
+  border-left: 4px solid #075196;
+  font-size: 1rem;
+  line-height: 1.55;
+  position: relative;
+}
+
+/* TICK UNIFICADO */
+.beneficios li::before {
+  content: "✔";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #075196;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ========================= */
+/* MÉTRICAS */
+/* ========================= */
+
+.metricas-full {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.metricas-full .metricas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.metrica {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.metrica h3 {
+  color: #075196;
+  margin-bottom: 10px;
+}
+
+/* ========================= */
+/* CIERRE CONTACTO */
+/* ========================= */
+
+.cierre-contacto {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.cierre-contacto p {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* TEXTO ESCRITORIO */
+.texto-desktop {
+  display: block;
+}
+
+/* TEXTO MÓVIL */
+.texto-mobile {
+  display: none;
+}
+
+.correo-mobile {
+  display: none;
+}
+
+.correo-destacado {
+  max-width: 100%;
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #075196;
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.correo-respuesta {
+  display: block;
+  margin-top: 12px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 900px) {
+  .cta-imagen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-final {
+    grid-template-columns: 1fr;
+  }
+
+  .metricas-full .metricas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mapa-cuadro iframe {
+    height: 260px;
+  }
+}
+
+/* ========================= */
+/* MÓVIL */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  .hero-sevilla {
+    height: 320px;
+  }
+
+  .texto-desktop {
+    display: none;
+  }
+
+  .texto-mobile {
+    display: block;
+  }
+
+  .correo-mobile {
+    display: inline-block;
+    margin-top: 10px;
+    background: #075196;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .correo-mobile:hover {
+    background: #063f75;
+  }
+
+  .metricas-full {
+    margin-bottom: 20px;
+  }
+
+  .cierre-contacto {
+    margin-top: 10px;
+  }
+}
+

@@ -84,46 +84,82 @@ export default function LosRemedios() {
         </div>
       </section>
 
-      {/* BENEFICIOS */}
-      <section className="beneficios">
-        <ul>
-          <li>Atención inmediata en Los Remedios y zonas cercanas</li>
-          <li>Instalación profesional de cristales, espejos y mamparas</li>
-          <li>Reparaciones urgentes con desplazamiento rápido</li>
-          <li>Materiales de alta calidad y acabados impecables</li>
-          <li>Presupuesto en menos de 24 horas</li>
-        </ul>
-      </section>
+      {/* BLOQUE AZUL — BENEFICIOS + MÉTRICAS */}
+      <div className="lr-bloque">
+        <div className="seccion-azul">
+          <section className="grid-final">
 
-      {/* MÉTRICAS FINALES */}
-      <section className="metricas-finales">
-        <div className="metricas-grid">
-          <div className="metrica">
-            <h3>+30 Años de Experiencia</h3>
-            <p>Trayectoria consolidada en cristalería profesional</p>
-          </div>
-          <div className="metrica">
-            <h3>+600k Montajes Completados</h3>
-            <p>Instalaciones realizadas en hogares y negocios</p>
-          </div>
-          <div className="metrica">
-            <h3>+20 Premios por Calidad</h3>
-            <p>Reconocimientos por excelencia en producto y servicio</p>
-          </div>
+            {/* BENEFICIOS */}
+            <div className="bloque-barrio">
+              <ul className="beneficios">
+                <li>Atención inmediata en Los Remedios y zonas cercanas</li>
+                <li>Instalación profesional de cristales, espejos y mamparas</li>
+                <li>Reparaciones urgentes con desplazamiento rápido</li>
+                <li>Materiales de alta calidad y acabados impecables</li>
+                <li>Presupuesto en menos de 24 horas</li>
+              </ul>
+            </div>
+
+            {/* MÉTRICAS — 2 ARRIBA + 1 ABAJO */}
+            <div className="bloque-barrio">
+
+              <div className="metricas-superior">
+                <div className="metrica">
+                  <h3>100k Montajes Completados</h3>
+                  <p>Instalaciones realizadas en hogares y negocios</p>
+                </div>
+
+                <div className="metrica">
+                  <h3>7 Premios por Calidad</h3>
+                  <p>Reconocimientos por excelencia en producto y servicio</p>
+                </div>
+              </div>
+
+              <div className="metrica-inferior">
+                <div className="metrica">
+                  <h3>30 Años de Experiencia</h3>
+                  <p>Trayectoria consolidada en cristalería profesional</p>
+                </div>
+              </div>
+
+            </div>
+
+          </section>
         </div>
-      </section>
 
-      {/* SECCIÓN FINAL — CONTACTO */}
-      <section className="cierre-contacto">
-        <p>
-          Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
-          <a href="mailto:cristaleria@cristaleriazamorano.com" className="correo-destacado">
-            cristaleria@cristaleriazamorano.com
-          </a>
-          <br />
-          y te responderemos a la mayor brevedad posible.
-        </p>
-      </section>
+        {/* CONTACTO FINAL */}
+        <section className="cierre-contacto">
+
+          {/* ESCRITORIO */}
+          <p className="texto-desktop">
+            Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
+            <a
+              href="mailto:cristaleria@cristaleriazamorano.com"
+              className="correo-destacado"
+            >
+              cristaleria@cristaleriazamorano.com
+            </a>
+            <br />
+            y te responderemos a la mayor brevedad posible.
+          </p>
+
+          {/* MÓVIL */}
+          <p className="texto-mobile">
+            Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
+            <a
+              href="mailto:cristaleria@cristaleriazamorano.com"
+              className="btn correo-mobile"
+            >
+              Enviar correo
+            </a>
+            <br />
+            <span className="correo-respuesta">
+              Te responderemos a la mayor brevedad posible.
+            </span>
+          </p>
+
+        </section>
+      </div>
 
     </div>
   );

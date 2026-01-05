@@ -49,7 +49,7 @@ body {
 
 .hero-text {
   position: absolute;
-  top: 50%; /* Ajustable si quieres compactar */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -57,14 +57,13 @@ body {
   z-index: 2;
 }
 
-/* TÍTULO HERO */
 .hero-text h1 {
   font-size: 3.8rem;
   font-weight: 800;
   margin-bottom: 10px;
 }
 
-/* Fade-in premium */
+/* Fade-in */
 .fade-in {
   opacity: 0;
   transform: translateY(12px);
@@ -300,42 +299,55 @@ body {
 }
 
 /* ========================================================= */
-/* CONTACTO FINAL */
+/* CONTACTO FINAL — CORREGIDO */
 /* ========================================================= */
 
 .dh-bloque .cierre-contacto {
   max-width: 1100px;
-  margin: 40px auto 30px; /* separación añadida */
-  padding: 0 20px;
+  margin: 40px auto 30px;
+  padding: 16px 20px;
   text-align: center;
   line-height: 1.7;
+  background: #f7fbff;
+  border: 1px solid #d6e6ff;
+  border-radius: 8px;
 }
 
 .dh-bloque .texto-desktop {
   display: block;
+  font-size: 1rem;
+  color: #075196;
+  font-weight: 600;
 }
 
 .dh-bloque .texto-mobile {
   display: none;
-}
-
-.dh-bloque .correo-mobile {
-  display: none;
+  font-size: 1rem;
+  color: #075196;
+  font-weight: 600;
 }
 
 .dh-bloque .correo-destacado {
   max-width: 100%;
   display: inline-block;
-  font-size: 0.85rem;
-  color: #075196;
+  font-size: 0.95rem;
+  color: #0078ff;
   font-weight: 700;
   text-decoration: none;
   overflow-wrap: anywhere;
 }
 
+.dh-bloque .correo-destacado:hover {
+  text-decoration: underline;
+}
+
 .dh-bloque .correo-respuesta {
   display: block;
   margin-top: 12px;
+}
+
+.dh-bloque .correo-mobile {
+  display: none;
 }
 
 /* ========================================================= */

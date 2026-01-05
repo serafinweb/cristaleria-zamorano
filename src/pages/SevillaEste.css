@@ -299,42 +299,55 @@ body {
 }
 
 /* ========================================================= */
-/* CONTACTO FINAL */
+/* CONTACTO FINAL — CORREGIDO */
 /* ========================================================= */
 
 .se-bloque .cierre-contacto {
   max-width: 1100px;
   margin: 40px auto 30px;
-  padding: 0 20px;
+  padding: 16px 20px;
   text-align: center;
   line-height: 1.7;
+  background: #f7fbff;
+  border: 1px solid #d6e6ff;
+  border-radius: 8px;
 }
 
 .se-bloque .texto-desktop {
   display: block;
+  font-size: 1rem;
+  color: #075196;
+  font-weight: 600;
 }
 
 .se-bloque .texto-mobile {
   display: none;
-}
-
-.se-bloque .correo-mobile {
-  display: none;
+  font-size: 1rem;
+  color: #075196;
+  font-weight: 600;
 }
 
 .se-bloque .correo-destacado {
   max-width: 100%;
   display: inline-block;
-  font-size: 0.85rem;
-  color: #075196;
+  font-size: 0.95rem;
+  color: #0078ff;
   font-weight: 700;
   text-decoration: none;
   overflow-wrap: anywhere;
 }
 
+.se-bloque .correo-destacado:hover {
+  text-decoration: underline;
+}
+
 .se-bloque .correo-respuesta {
   display: block;
   margin-top: 12px;
+}
+
+.se-bloque .correo-mobile {
+  display: none;
 }
 
 /* ========================================================= */

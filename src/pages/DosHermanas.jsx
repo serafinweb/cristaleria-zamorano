@@ -31,7 +31,7 @@ export default function DosHermanas() {
           </div>
 
           <small className="hero-subtext">
-            atención inmediata en todo Dos Hermanas
+            te atendemos en menos de 5 minutos
           </small>
         </div>
       </div>

@@ -96,22 +96,30 @@ export default function Camas() {
             </ul>
           </div>
 
-          {/* MÉTRICAS (DERECHA) */}
+          {/* MÉTRICAS (DERECHA) — 2 ARRIBA + 1 ABAJO */}
           <div className="bloque-barrio">
-            <div className="metricas-grid">
-              <div className="metrica">
-                <h3>30 Años de Experiencia</h3>
-                <p>Trayectoria consolidada en cristalería profesional</p>
-              </div>
+
+            {/* Fila superior: 100k + 7 premios */}
+            <div className="metricas-superior">
               <div className="metrica">
                 <h3>100k Montajes Completados</h3>
                 <p>Instalaciones realizadas en hogares y negocios</p>
               </div>
+
               <div className="metrica">
                 <h3>7 Premios por Calidad</h3>
                 <p>Reconocimientos por excelencia en producto y servicio</p>
               </div>
             </div>
+
+            {/* Fila inferior centrada: 30 años */}
+            <div className="metrica-inferior">
+              <div className="metrica">
+                <h3>30 Años de Experiencia</h3>
+                <p>Trayectoria consolidada en cristalería profesional</p>
+              </div>
+            </div>
+
           </div>
 
         </section>

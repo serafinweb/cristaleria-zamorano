@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Servicios.css";
 
 // HERO
@@ -16,6 +16,79 @@ import imgUrgente from "../assets/servicios/servicio-urgente.png";
 import fotoServicios from "../assets/servicios/cristaleria-trabajo.png";
 
 export default function Servicios() {
+
+  // ============================
+  // SEO DINÁMICO (React 19)
+  // ============================
+  useEffect(() => {
+    // TITLE
+    document.title =
+      "Servicios de Cristalería en Sevilla | Cristales a Medida, Mamparas y Reparaciones Urgentes";
+
+    // META DESCRIPTION
+    let metaDescription = document.querySelector("meta[name='description']");
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content =
+      "Servicios de cristalería en Sevilla: instalación de cristales a medida, mamparas de baño, espejos personalizados, ventanas de aluminio y PVC, y reparaciones urgentes en el mismo día.";
+
+    // CANONICAL
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://cristaleriasevilla.com/servicios";
+
+    // JSON-LD
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = `
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Servicios de Cristalería en Sevilla",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Cristalería Sevilla",
+        "image": "https://cristaleriasevilla.com/favicon.ico",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sevilla",
+          "addressRegion": "Andalucía",
+          "addressCountry": "ES"
+        },
+        "telephone": "+34955631356",
+        "url": "https://cristaleriasevilla.com/servicios"
+      },
+      "serviceType": [
+        "Cristales a medida",
+        "Mamparas de baño",
+        "Espejos personalizados",
+        "Ventanas de aluminio y PVC",
+        "Reparaciones urgentes"
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Sevilla"
+      },
+      "description": "Instalación profesional de cristales, mamparas, espejos, ventanas y reparaciones urgentes en Sevilla."
+    }
+    `;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  // ============================
+  // JSX
+  // ============================
   return (
     <div className="page">
       <div className="servicios-bloque">
@@ -143,7 +216,7 @@ export default function Servicios() {
           </a>
         </div>
 
-        {/* CONTACTO FINAL (idéntico a Camas) */}
+        {/* CONTACTO FINAL */}
         <section className="cierre-contacto">
 
           {/* ESCRITORIO */}

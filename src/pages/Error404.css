@@ -1,0 +1,121 @@
+/* ========================================================= */
+/* ESTRUCTURA GENERAL */
+/* ========================================================= */
+
+.error404-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 30px;
+  text-align: center;
+}
+
+/* ========================================================= */
+/* IMAGEN */
+/* ========================================================= */
+
+.error-img-wrapper {
+  width: 100%;
+  max-width: 700px;
+}
+
+.error-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ========================================================= */
+/* SUBTÍTULO */
+/* ========================================================= */
+
+.error-subtitulo {
+  font-size: 1.4rem;
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ========================================================= */
+/* BOTONES */
+/* ========================================================= */
+
+.error-botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.error-botones a {
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Colores */
+.btn-inicio {
+  background: #ffcc80;
+  color: #222;
+}
+.btn-inicio:hover {
+  background: #ffb74d;
+}
+
+.btn-servicios {
+  background: #e6e6e6;
+  color: #222;
+}
+.btn-servicios:hover {
+  background: #d4d4d4;
+}
+
+.btn-llamar {
+  background: #075196;
+  color: white;
+}
+.btn-llamar:hover {
+  background: #063f75;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+}
+.btn-whatsapp:hover {
+  background: #1ebe5a;
+}
+
+/* ========================================================= */
+/* RESPONSIVE */
+/* ========================================================= */
+
+@media (max-width: 600px) {
+
+  .error404-page {
+    padding: 30px 16px;
+    gap: 24px;
+  }
+
+  .error-subtitulo {
+    font-size: 1.2rem;
+  }
+
+  .error-botones {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .error-botones a {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+}

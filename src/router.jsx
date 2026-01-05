@@ -11,13 +11,19 @@ import Inicio from "./pages/Inicio";
 import AvisoLegal from "./pages/AvisoLegal";
 import Privacidad from "./pages/Privacidad";
 
-// 👉 IMPORTA LA NUEVA PÁGINA
 import Servicios from "./pages/Servicios";
+
+// 👉 IMPORTA LA NUEVA PÁGINA 404
+import Error404 from "./pages/Error404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+
+    // 👉 ESTA LÍNEA ES LA CLAVE
+    errorElement: <Error404 />,
+
     children: [
       { path: "/", element: <Inicio /> },
       { path: "/triana", element: <Triana /> },
@@ -26,12 +32,13 @@ const router = createBrowserRouter([
       { path: "/los-remedios", element: <LosRemedios /> },
       { path: "/sevilla-este", element: <SevillaEste /> },
 
-      // 👉 NUEVA RUTA
       { path: "/servicios", element: <Servicios /> },
 
-      // Páginas legales
       { path: "/aviso-legal", element: <AvisoLegal /> },
       { path: "/privacidad", element: <Privacidad /> },
+
+      // 👉 OPCIONAL: ruta comodín adicional (no necesaria, pero no molesta)
+      { path: "*", element: <Error404 /> },
     ],
   },
 ]);

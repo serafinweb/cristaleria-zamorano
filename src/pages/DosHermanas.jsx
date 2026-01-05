@@ -10,10 +10,8 @@ export default function DosHermanas() {
   // SEO DINÁMICO (React 19)
   // ============================
   useEffect(() => {
-    // TITLE
     document.title = "Cristalería en Dos Hermanas | Servicio Urgente y Cristales a Medida";
 
-    // META DESCRIPTION
     let metaDescription = document.querySelector("meta[name='description']");
     if (!metaDescription) {
       metaDescription = document.createElement("meta");
@@ -23,7 +21,6 @@ export default function DosHermanas() {
     metaDescription.content =
       "Cristalería en Dos Hermanas con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio. Atención inmediata y presupuesto en 24h.";
 
-    // CANONICAL (DOMINIO CORRECTO)
     let canonical = document.querySelector("link[rel='canonical']");
     if (!canonical) {
       canonical = document.createElement("link");
@@ -32,7 +29,6 @@ export default function DosHermanas() {
     }
     canonical.href = "https://cristaleriasevilla.com/dos-hermanas";
 
-    // JSON-LD (DOMINIO CORRECTO)
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.innerHTML = `
@@ -61,7 +57,7 @@ export default function DosHermanas() {
   }, []);
 
   // ============================
-  // JSX ORIGINAL + ALT OPTIMIZADOS
+  // JSX
   // ============================
   return (
     <div className="page">
@@ -72,8 +68,14 @@ export default function DosHermanas() {
           src={heroDosHermanas}
           alt="Cristalería en Dos Hermanas – instalación de cristales a medida"
         />
+
         <div className="hero-text">
-          <h1 className="fade-in text-gradient">Cristalería en Dos Hermanas</h1>
+
+          {/* TÍTULO — ESCRITORIO: 1 línea / MÓVIL: 3 líneas (via CSS) */}
+          <h1 className="fade-in text-gradient titulo-dh">
+            Cristalería en Dos Hermanas
+          </h1>
+
           <p className="fade-in-sub">Instalación urgente · Presupuesto en 24h</p>
 
           <div className="hero-botones">
@@ -194,7 +196,6 @@ export default function DosHermanas() {
         {/* CONTACTO FINAL */}
         <section className="cierre-contacto">
 
-          {/* ESCRITORIO */}
           <p className="texto-desktop">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
             <a
@@ -207,7 +208,6 @@ export default function DosHermanas() {
             y te responderemos a la mayor brevedad posible.
           </p>
 
-          {/* MÓVIL */}
           <p className="texto-mobile">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
             <a
@@ -224,7 +224,7 @@ export default function DosHermanas() {
 
         </section>
 
-      </div> {/* FIN dh-bloque */}
+      </div>
 
     </div>
   );

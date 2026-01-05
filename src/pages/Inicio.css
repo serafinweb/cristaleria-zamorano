@@ -1,191 +1,211 @@
-/* ========================= */
-/* CONTENEDOR GENERAL */
-/* ========================= */
+/* ========================================================= */
+/* FONDO GENERAL */
+/* ========================================================= */
+
+body {
+  background: linear-gradient(to bottom, #eaf4ff, #ffffff);
+  font-family: Arial, sans-serif;
+}
+
+/* ========================================================= */
+/* CONTENEDOR PRINCIPAL */
+/* ========================================================= */
 
 .page {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  overflow-x: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* ========================= */
-/* BLOQUE ENCAPSULADOR HOME */
-/* ========================= */
+/* ========================================================= */
+/* HERO */
+/* ========================================================= */
 
-.inicio-bloque {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-/* ========================= */
-/* HERO SEVILLA */
-/* ========================= */
-
-.inicio-bloque .hero-sevilla {
+.hero-sevilla {
   position: relative;
   width: 100%;
   height: 420px;
   overflow: hidden;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
-.inicio-bloque .hero-sevilla img {
+.hero-sevilla img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.55);
 }
 
-.inicio-bloque .hero-text {
+.hero-sevilla::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(7, 81, 150, 0.45);
+}
+
+.hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   color: white;
-  width: 90%;
-  max-width: 700px;
-  padding: 0 10px;
+  text-align: center;
+  z-index: 2;
 }
 
-.inicio-bloque .text-gradient {
-  background: linear-gradient(90deg, #ffffff, #d9eaff);
+/* ========================================================= */
+/* TÍTULO — ESCRITORIO */
+/* ========================================================= */
+
+.titulo-inicio {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.05;
+}
+
+/* Degradado premium */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #e8f1ff 35%, #bcd7ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.inicio-bloque .fade-in {
-  animation: fadeIn 1.2s ease forwards;
-}
+/* ========================================================= */
+/* ANIMACIONES */
+/* ========================================================= */
 
-.inicio-bloque .fade-in-sub {
+.fade-in {
   opacity: 0;
-  animation: fadeIn 1.4s ease forwards;
+  transform: translateY(12px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
 }
 
-.inicio-bloque .fade-in-btn {
+.fade-in-sub {
   opacity: 0;
-  animation: fadeIn 1.6s ease forwards;
+  transform: translateY(12px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.25s;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.fade-in-btn {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.inicio-bloque .hero-botones {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.fade-in-btn:nth-child(1) { animation-delay: 0.4s; }
+.fade-in-btn:nth-child(2) { animation-delay: 0.55s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.inicio-bloque .hero-btn,
-.inicio-bloque .hero-whatsapp {
-  padding: 12px 22px;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: 0.2s ease;
+.hero-text p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
 }
 
-.inicio-bloque .hero-btn {
-  background: #075196;
-  color: white;
-}
-
-.inicio-bloque .hero-btn:hover {
-  background: #063f75;
-}
-
-.inicio-bloque .hero-whatsapp {
-  background: #25d366;
-  color: white;
-}
-
-.inicio-bloque .hero-whatsapp:hover {
-  background: #1ebe5a;
-}
-
-.inicio-bloque .hero-subtext {
+.hero-subtext {
   display: block;
-  margin-top: 10px;
-  font-size: 0.85rem;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #eaf4ff;
   opacity: 0.9;
 }
 
-/* ========================= */
+/* ========================================================= */
+/* BOTONES HERO */
+/* ========================================================= */
+
+.hero-botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.hero-whatsapp {
+  background: #25d366;
+}
+
+/* ========================================================= */
 /* CONTENIDO PRINCIPAL */
-/* ========================= */
+/* ========================================================= */
 
-.inicio-bloque .page-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+.page-content {
+  margin: 30px 0;
 }
 
-.inicio-bloque .page-content h2 {
-  color: #075196;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.inicio-bloque .page-content p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #333;
-}
-
-/* ========================= */
-/* CTA + IMAGEN */
-/* ========================= */
-
-.inicio-bloque .cta-imagen {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.inicio-bloque .cta-titulo {
+.page-content h2 {
   text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
   color: #075196;
-  font-size: 1.6rem;
-  margin-bottom: 25px;
 }
 
-.inicio-bloque .cta-imagen-grid {
+.page-content p {
+  text-align: left;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ========================================================= */
+/* CTA + IMAGEN */
+/* ========================================================= */
+
+.cta-imagen {
+  max-width: 1100px;
+  margin: 30px auto 20px;
+  padding: 0 20px;
+}
+
+.cta-titulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #075196;
+  margin-bottom: 30px;
+}
+
+.cta-imagen-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
 }
 
-.inicio-bloque .cta-imagen-texto {
+.cta-imagen-texto {
+  max-width: 500px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.inicio-bloque .cta-imagen-texto p {
+.cta-imagen-texto p {
+  color: #222;
+  line-height: 1.6;
   margin-bottom: 15px;
-  line-height: 1.7;
-  color: #333;
 }
 
-/* 🔥 CORREGIDO: BOTONES CENTRADOS */
-.inicio-bloque .cta-botones {
+.cta-botones {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
-  width: 100%;
 }
 
-.inicio-bloque .cta-botones .btn {
+.cta-botones .btn {
   padding: 12px 22px;
   border-radius: 6px;
   background: #075196;
@@ -195,80 +215,65 @@
   transition: 0.2s ease;
 }
 
-.inicio-bloque .cta-botones .btn:hover {
+.cta-botones .btn:hover {
   background: #063f75;
 }
 
-.inicio-bloque .cta-botones .whatsapp {
+.cta-botones .whatsapp {
   background: #25d366;
 }
 
-.inicio-bloque .cta-botones .whatsapp:hover {
+.cta-botones .whatsapp:hover {
   background: #1ebe5a;
 }
 
-.inicio-bloque .cta-imagen-foto img {
+.cta-imagen-foto img {
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
+  height: auto;
   max-height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.96);
+  animation: fadeInScale 1s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
-/* ========================= */
-/* BLOQUE AZUL */
-/* ========================= */
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-.inicio-bloque .seccion-azul {
+/* ========================================================= */
+/* BLOQUE AZUL */
+/* ========================================================= */
+
+.seccion-azul {
   background: #f3f8ff;
   padding: 40px 0;
+  margin-top: 20px;
   border-radius: 10px;
 }
 
-/* ========================= */
-/* MAPA + BENEFICIOS */
-/* ========================= */
-
-.inicio-bloque .seccion-final {
+.grid-final {
   max-width: 1100px;
   margin: 0 auto 20px;
   padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.inicio-bloque .grid-final {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  margin-bottom: 25px;
+  align-items: start;
 }
 
-/* MAPA */
-.inicio-bloque .mapa-cuadro {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.inicio-bloque .mapa-cuadro h3 {
-  margin-bottom: 15px;
-  color: #075196;
-  font-size: 1.4rem;
-}
-
-.inicio-bloque .mapa-cuadro iframe {
-  flex: 1;
-  border-radius: 8px;
-  width: 100%;
+.mapa-cuadro {
   height: 300px;
-  max-width: 100%;
-  display: block;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-/* BENEFICIOS */
-.inicio-bloque .beneficios ul {
+.beneficios ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -276,7 +281,7 @@
   gap: 12px;
 }
 
-.inicio-bloque .beneficios li {
+.beneficios li {
   background: white;
   padding: 12px 26px;
   padding-left: 42px;
@@ -285,9 +290,10 @@
   font-size: 1rem;
   line-height: 1.55;
   position: relative;
+  color: #222;
 }
 
-.inicio-bloque .beneficios li::before {
+.beneficios li::before {
   content: "✔";
   position: absolute;
   left: 16px;
@@ -298,39 +304,38 @@
   font-weight: bold;
 }
 
-/* ========================= */
 /* MÉTRICAS */
-/* ========================= */
-
-.inicio-bloque .metricas-full {
-  max-width: 1100px;
-  margin: 0 auto 40px;
-  padding: 0 20px;
+.metricas-full {
+  margin-top: 30px;
 }
 
-.inicio-bloque .metricas-full .metricas-grid {
+.metricas-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 20px;
 }
 
-.inicio-bloque .metrica {
+.metrica {
   background: white;
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid #d6e6ff;
   text-align: center;
 }
 
-.inicio-bloque .metrica h3 {
+.metrica h3 {
   color: #075196;
   margin-bottom: 10px;
 }
 
-/* ========================= */
+/* ========================================================= */
 /* CONTACTO FINAL */
-/* ========================= */
+/* ========================================================= */
 
-.inicio-bloque .cierre-contacto {
+.cierre-contacto {
   max-width: 1100px;
   margin: 40px auto 30px;
   padding: 16px 20px;
@@ -341,79 +346,76 @@
   border-radius: 8px;
 }
 
-.inicio-bloque .cierre-contacto p {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.inicio-bloque .texto-desktop {
+.texto-desktop {
   display: block;
+  font-size: 1rem;
+  color: #075196;
+  font-weight: 600;
 }
 
-.inicio-bloque .texto-mobile {
+.texto-mobile {
   display: none;
+  font-size: 1rem;
+  color: #075196;
+  font-weight: 600;
 }
 
-.inicio-bloque .correo-mobile {
-  display: none;
-}
-
-.inicio-bloque .correo-destacado {
+.correo-destacado {
   max-width: 100%;
   display: inline-block;
-  font-size: 0.85rem;
-  color: #075196;
+  font-size: 0.95rem;
+  color: #0078ff;
   font-weight: 700;
   text-decoration: none;
   overflow-wrap: anywhere;
 }
 
-.inicio-bloque .correo-respuesta {
+.correo-destacado:hover {
+  text-decoration: underline;
+}
+
+.correo-respuesta {
   display: block;
   margin-top: 12px;
 }
 
-/* ========================= */
+.correo-mobile {
+  display: none;
+}
+
+/* ========================================================= */
 /* RESPONSIVE */
-/* ========================= */
+/* ========================================================= */
 
 @media (max-width: 900px) {
-  .inicio-bloque .cta-imagen-grid {
+  .cta-imagen-grid {
     grid-template-columns: 1fr;
   }
 
-  .inicio-bloque .grid-final {
+  .cta-imagen-foto img {
+    margin-top: 20px;
+  }
+
+  .grid-final {
     grid-template-columns: 1fr;
   }
 
-  .inicio-bloque .metricas-full .metricas-grid {
+  .metricas-grid {
     grid-template-columns: 1fr;
-  }
-
-  .inicio-bloque .mapa-cuadro iframe {
-    height: 260px;
   }
 }
 
-/* ========================= */
-/* MÓVIL */
-/* ========================= */
-
 @media (max-width: 600px) {
 
-  .inicio-bloque .hero-sevilla {
-    height: 320px;
-  }
-
-  .inicio-bloque .texto-desktop {
+  .texto-desktop {
     display: none;
   }
 
-  .inicio-bloque .texto-mobile {
+  .texto-mobile {
     display: block;
   }
 
-  .inicio-bloque .correo-mobile {
+  .correo-mobile {
     display: inline-block;
     margin-top: 10px;
     background: #075196;
@@ -425,23 +427,70 @@
     font-size: 0.9rem;
   }
 
-  .inicio-bloque .correo-mobile:hover {
+  .correo-mobile:hover {
     background: #063f75;
   }
 
-  .inicio-bloque .metricas-full {
-    margin-bottom: 20px;
-  }
-
-  .inicio-bloque .cierre-contacto {
-    margin-top: 50px;
-  }
-
-  .inicio-bloque .beneficios li::before {
+  .beneficios li::before {
     content: "";
   }
 
-  .inicio-bloque .beneficios li {
+  .beneficios li {
     padding-left: 20px;
+  }
+
+  .cierre-contacto {
+    margin-top: 50px;
+  }
+}
+
+/* ========================================================= */
+/* TÍTULO EN MÓVIL — FORMATO CAMAS (2 LÍNEAS) */
+/* ========================================================= */
+
+@media (max-width: 600px) {
+
+  .titulo-inicio {
+    font-size: 0 !important;
+    line-height: 0 !important;
+    position: relative;
+  }
+
+  .titulo-inicio::after {
+    content: "Cristalería\A en Sevilla";
+    white-space: pre-line;
+    display: block;
+
+    font-size: 2.25rem;   /* 🔥 tamaño seguro */
+    line-height: 1.05;
+    font-weight: 800;
+
+    background: linear-gradient(135deg, #ffffff 0%, #e8f1ff 35%, #bcd7ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-wrap: balance;
+    max-width: 78%;       /* 🔥 evita que sobresalga */
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* ========================================================= */
+/* BOTONES — AJUSTE PARA QUE NO SOBRESALGAN */
+/* ========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero-botones .btn,
+  .cta-botones .btn {
+    padding: 10px 16px;      /* 🔥 más compacto */
+    font-size: 0.9rem;       /* 🔥 más seguro */
+    max-width: 140px;        /* 🔥 evita que sobresalgan */
+    white-space: nowrap;
+  }
+
+  .hero-botones {
+    gap: 10px;               /* 🔥 separación más pequeña */
   }
 }

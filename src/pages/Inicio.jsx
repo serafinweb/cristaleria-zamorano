@@ -1,21 +1,84 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Inicio.css";
 import heroSevilla from "../assets/Sevilla/hero-sevilla.png";
 import trabajoCristal from "../assets/Sevilla/trabajo-cristal.png";
 import Services from "../components/Services";
 
 export default function Inicio() {
+
+  // ============================================================
+  // SEO DINÁMICO (React 19)
+  // ============================================================
+  useEffect(() => {
+
+    // TITLE
+    document.title = "Cristalería en Sevilla | Urgencias y Cristales a Medida";
+
+    // META DESCRIPTION
+    let metaDescription = document.querySelector("meta[name='description']");
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content =
+      "Cristalería en Sevilla con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio. Presupuesto en 24h.";
+
+    // CANONICAL
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://cristaleriasevilla.com/";
+
+    // JSON-LD
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.innerHTML = `
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Cristalería Sevilla",
+      "image": "https://cristaleriasevilla.com/favicon.ico",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sevilla",
+        "addressRegion": "Andalucía",
+        "addressCountry": "ES"
+      },
+      "url": "https://cristaleriasevilla.com/",
+      "telephone": "+34955631356",
+      "priceRange": "€€",
+      "description": "Cristalería en Sevilla con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio."
+    }
+    `;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  // ============================================================
+  // JSX
+  // ============================================================
   return (
     <div className="page">
 
-      {/* BLOQUE ENCAPSULADOR DE LA HOME */}
       <div className="inicio-bloque">
 
         {/* HERO */}
         <div className="hero-sevilla">
           <img src={heroSevilla} alt="Cristalería en Sevilla" />
           <div className="hero-text">
-            <h1 className="fade-in text-gradient">Cristalería en Sevilla</h1>
+
+            {/* TÍTULO RESPONSIVE (formato Camas) */}
+            <h1 className="fade-in text-gradient titulo-inicio">
+              Cristalería en Sevilla
+            </h1>
+
             <p className="fade-in-sub">Servicio urgente · Presupuesto en 24h</p>
 
             <div className="hero-botones">
@@ -86,14 +149,13 @@ export default function Inicio() {
           </div>
         </section>
 
-        {/* BLOQUE AZUL CLARO — MAPA + BENEFICIOS + MÉTRICAS */}
+        {/* BLOQUE AZUL */}
         <div className="seccion-azul">
 
           {/* MAPA + BENEFICIOS */}
           <section className="seccion-final">
             <div className="grid-final">
 
-              {/* IZQUIERDA — MAPA */}
               <div className="mapa-cuadro">
                 <h3>¿Dónde estamos?</h3>
                 <iframe
@@ -107,7 +169,6 @@ export default function Inicio() {
                 ></iframe>
               </div>
 
-              {/* DERECHA — BENEFICIOS */}
               <div className="beneficios">
                 <ul>
                   <li>Atención inmediata en toda Sevilla capital</li>
@@ -139,7 +200,7 @@ export default function Inicio() {
             </div>
           </section>
 
-        </div> {/* FIN SECCIÓN AZUL */}
+        </div>
 
         {/* CONTACTO FINAL */}
         <section className="cierre-contacto">
@@ -165,7 +226,7 @@ export default function Inicio() {
           </p>
         </section>
 
-      </div> {/* FIN inicio-bloque */}
+      </div>
 
     </div>
   );

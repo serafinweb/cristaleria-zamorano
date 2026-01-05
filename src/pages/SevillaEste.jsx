@@ -10,10 +10,8 @@ export default function SevillaEste() {
   // SEO DINÁMICO (React 19)
   // ============================
   useEffect(() => {
-    // TITLE
     document.title = "Cristalería en Sevilla Este | Servicio Urgente y Cristales a Medida";
 
-    // META DESCRIPTION
     let metaDescription = document.querySelector("meta[name='description']");
     if (!metaDescription) {
       metaDescription = document.createElement("meta");
@@ -23,7 +21,6 @@ export default function SevillaEste() {
     metaDescription.content =
       "Cristalería en Sevilla Este con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio. Atención inmediata y presupuesto en 24h.";
 
-    // CANONICAL (DOMINIO CORRECTO)
     let canonical = document.querySelector("link[rel='canonical']");
     if (!canonical) {
       canonical = document.createElement("link");
@@ -32,7 +29,6 @@ export default function SevillaEste() {
     }
     canonical.href = "https://cristaleriasevilla.com/sevilla-este";
 
-    // JSON-LD (DOMINIO CORRECTO)
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.innerHTML = `
@@ -61,7 +57,7 @@ export default function SevillaEste() {
   }, []);
 
   // ============================
-  // JSX ORIGINAL + ALT OPTIMIZADOS
+  // JSX
   // ============================
   return (
     <div className="page">
@@ -72,8 +68,14 @@ export default function SevillaEste() {
           src={heroSevillaEste}
           alt="Cristalería en Sevilla Este – instalación de cristales a medida"
         />
+
         <div className="hero-text">
-          <h1 className="fade-in text-gradient">Cristalería en Sevilla Este</h1>
+
+          {/* TÍTULO — ESCRITORIO: 1 línea / MÓVIL: 3 líneas (via CSS) */}
+          <h1 className="fade-in text-gradient titulo-se">
+            Cristalería en Sevilla Este
+          </h1>
+
           <p className="fade-in-sub">Servicio urgente · Presupuesto en 24h</p>
 
           <div className="hero-botones">
@@ -196,7 +198,6 @@ export default function SevillaEste() {
         {/* CONTACTO FINAL */}
         <section className="cierre-contacto">
 
-          {/* ESCRITORIO */}
           <p className="texto-desktop">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
             <a
@@ -209,7 +210,6 @@ export default function SevillaEste() {
             y te responderemos a la mayor brevedad posible.
           </p>
 
-          {/* MÓVIL */}
           <p className="texto-mobile">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
             <a

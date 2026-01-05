@@ -23,7 +23,7 @@ export default function Camas() {
     metaDescription.content =
       "Cristalería en Camas con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio. Atención inmediata y presupuesto en 24h.";
 
-    // CANONICAL (DOMINIO CORRECTO)
+    // CANONICAL
     let canonical = document.querySelector("link[rel='canonical']");
     if (!canonical) {
       canonical = document.createElement("link");
@@ -32,7 +32,7 @@ export default function Camas() {
     }
     canonical.href = "https://cristaleriasevilla.com/camas";
 
-    // JSON-LD (DOMINIO CORRECTO)
+    // JSON-LD
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.innerHTML = `
@@ -61,7 +61,7 @@ export default function Camas() {
   }, []);
 
   // ============================
-  // JSX ORIGINAL + ALT OPTIMIZADOS
+  // JSX
   // ============================
   return (
     <div className="page">
@@ -72,14 +72,26 @@ export default function Camas() {
           src={heroCamas}
           alt="Cristalería en Camas – instalación de cristales a medida"
         />
+
+        <div className="hero-camas-overlay"></div>
+
         <div className="hero-text">
-          <h1 className="fade-in text-gradient">Cristalería en Camas</h1>
-          <p className="fade-in-sub">Servicio urgente · Presupuesto en 24h</p>
+
+          {/* TÍTULO EN DOS LÍNEAS — IGUAL QUE DOS HERMANAS */}
+          <h1 className="fade-in text-gradient titulo-camas">
+            <span>Cristalería</span>
+            <span>en Camas</span>
+          </h1>
+
+          <p className="fade-in-sub">
+            Servicio urgente · Presupuesto en 24h
+          </p>
 
           <div className="hero-botones">
             <a href="tel:+34955631356" className="btn hero-btn fade-in-btn">
               ¡Llama ahora!
             </a>
+
             <a
               href="https://wa.me/34659521144"
               target="_blank"

@@ -19,14 +19,25 @@
   width: 100%;
   height: 420px;
   overflow: hidden;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 .hero-camas img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.55);
+}
+
+.hero-camas-overlay {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(7, 81, 150, 0.45);
+  z-index: 1;
 }
 
 .hero-text {
@@ -34,43 +45,93 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   color: white;
-  width: 90%;
-  max-width: 700px;
-  padding: 0 10px;
+  text-align: center;
+  z-index: 2;
 }
 
+/* ========================= */
+/* TÍTULO — IGUAL QUE DOS HERMANAS */
+/* ========================= */
+
+.titulo-camas {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.05;
+}
+
+.titulo-camas span {
+  display: block;
+}
+
+/* Degradado premium */
 .text-gradient {
-  background: linear-gradient(90deg, #ffffff, #d9eaff);
+  background: linear-gradient(135deg, #ffffff 0%, #e8f1ff 35%, #bcd7ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
+
 .fade-in {
-  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
 }
 
 .fade-in-sub {
   opacity: 0;
-  animation: fadeIn 1.4s ease forwards;
+  transform: translateY(12px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.25s;
 }
 
 .fade-in-btn {
   opacity: 0;
-  animation: fadeIn 1.6s ease forwards;
+  transform: translateY(12px);
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.fade-in-btn:nth-child(1) { animation-delay: 0.4s; }
+.fade-in-btn:nth-child(2) { animation-delay: 0.55s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+/* ========================= */
+/* SUBTÍTULO */
+/* ========================= */
+
+.hero-text p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.hero-subtext {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #eaf4ff;
+  opacity: 0.9;
+}
+
+/* ========================= */
+/* BOTONES HERO */
+/* ========================= */
 
 .hero-botones {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 15px;
+  margin-top: 15px;
 }
 
 .hero-btn,
@@ -81,6 +142,8 @@
   font-size: 1rem;
   text-decoration: none;
   transition: 0.2s ease;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .hero-btn {
@@ -101,13 +164,6 @@
   background: #1ebe5a;
 }
 
-.hero-subtext {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
-
 /* ========================= */
 /* CONTENIDO PRINCIPAL */
 /* ========================= */
@@ -122,6 +178,7 @@
   color: #075196;
   font-size: 1.8rem;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .page-content p {
@@ -131,26 +188,26 @@
 }
 
 /* ========================= */
-/* CTA + IMAGEN — ENCAPSULADO */
+/* CTA + IMAGEN */
 /* ========================= */
 
 .cm-bloque .cta-imagen {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 60px auto;
   padding: 0 20px;
 }
 
 .cm-bloque .cta-titulo {
   text-align: center;
   color: #075196;
-  font-size: 1.6rem;
-  margin-bottom: 25px;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 .cm-bloque .cta-imagen-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -164,7 +221,6 @@
   color: #333;
 }
 
-/* 🔥 CORREGIDO: BOTONES CENTRADOS */
 .cm-bloque .cta-botones {
   margin-top: 20px;
   display: flex;
@@ -349,7 +405,6 @@
 /* ========================= */
 
 @media (max-width: 900px) {
-
   .cm-bloque .cta-imagen-grid {
     grid-template-columns: 1fr;
   }
@@ -361,16 +416,24 @@
   .cm-bloque .grid-final {
     grid-template-columns: 1fr;
   }
-
-  .hero-camas {
-    height: 300px;
-  }
 }
 
 @media (max-width: 600px) {
 
-  .hero-camas {
-    height: 320px;
+  /* TÍTULO EN MÓVIL — GRANDE COMO DOS HERMANAS */
+  .titulo-camas {
+    font-size: 2.6rem !important;
+    line-height: 1.05 !important;
+  }
+
+  .titulo-camas span {
+    white-space: nowrap;
+  }
+
+  .hero-text {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 20px;
   }
 
   .cm-bloque .texto-desktop {
@@ -412,8 +475,6 @@
   }
 
   .cm-bloque .metrica-inferior {
-    display: flex;
-    justify-content: center;
     margin-top: 20px;
   }
 

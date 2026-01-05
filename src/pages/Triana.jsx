@@ -10,10 +10,8 @@ export default function Triana() {
   // SEO DINÁMICO (React 19)
   // ============================
   useEffect(() => {
-    // TITLE
     document.title = "Cristalería en Triana | Servicio Urgente y Cristales a Medida";
 
-    // META DESCRIPTION
     let metaDescription = document.querySelector("meta[name='description']");
     if (!metaDescription) {
       metaDescription = document.createElement("meta");
@@ -23,16 +21,14 @@ export default function Triana() {
     metaDescription.content =
       "Cristalería en Triana con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio. Atención inmediata y presupuesto en 24h.";
 
-    // CANONICAL (DOMINIO CORRECTO)
     let canonical = document.querySelector("link[rel='canonical']");
     if (!canonical) {
       canonical = document.createElement("link");
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://cristaleriasevilla.com/triana";
+    canonical.href = "https://cristalereriasevilla.com/triana";
 
-    // JSON-LD (DOMINIO CORRECTO)
     const script = document.createElement("script");
     script.type = "application/ld+json";
     script.innerHTML = `
@@ -40,14 +36,14 @@ export default function Triana() {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Cristalería Sevilla",
-      "image": "https://cristaleriasevilla.com/favicon.ico",
+      "image": "https://cristalereriasevilla.com/favicon.ico",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Triana, Sevilla",
         "addressRegion": "Andalucía",
         "addressCountry": "ES"
       },
-      "url": "https://cristaleriasevilla.com/triana",
+      "url": "https://cristalereriasevilla.com/triana",
       "telephone": "+34955631356",
       "priceRange": "€€",
       "description": "Cristalería en Triana con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio."
@@ -61,7 +57,7 @@ export default function Triana() {
   }, []);
 
   // ============================
-  // JSX ORIGINAL + ALT OPTIMIZADOS
+  // JSX
   // ============================
   return (
     <div className="page">
@@ -72,8 +68,14 @@ export default function Triana() {
           src={heroTriana}
           alt="Cristalería en Triana – instalación de cristales a medida"
         />
+
         <div className="hero-text">
-          <h1 className="fade-in text-gradient">Cristalería en Triana</h1>
+
+          {/* TÍTULO — ESCRITORIO: 1 línea / MÓVIL: 2 líneas (formato Camas) */}
+          <h1 className="fade-in text-gradient titulo-tr">
+            Cristalería en Triana
+          </h1>
+
           <p className="fade-in-sub">Servicio urgente · Presupuesto en 24h</p>
 
           <div className="hero-botones">
@@ -195,24 +197,22 @@ export default function Triana() {
         {/* CONTACTO FINAL */}
         <section className="cierre-contacto">
 
-          {/* ESCRITORIO */}
           <p className="texto-desktop">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
             <a
-              href="mailto:cristaleria@cristaleriasevilla.com"
+              href="mailto:cristaleria@cristalereriasevilla.com"
               className="correo-destacado"
             >
-              cristaleria@cristaleriasevilla.com
+              cristaleria@cristalereriasevilla.com
             </a>
             <br />
             y te responderemos a la mayor brevedad posible.
           </p>
 
-          {/* MÓVIL */}
           <p className="texto-mobile">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
             <a
-              href="mailto:cristaleria@cristaleriasevilla.com"
+              href="mailto:cristaleria@cristalereriasevilla.com"
               className="btn correo-mobile"
             >
               Enviar correo

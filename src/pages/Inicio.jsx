@@ -19,7 +19,6 @@ export default function Inicio() {
             <a href="tel:+34955631356" className="btn hero-btn fade-in-btn">
               ¡Llama ahora!
             </a>
-
             <a
               href="https://wa.me/34659521144"
               target="_blank"
@@ -58,7 +57,6 @@ export default function Inicio() {
         <div className="cta-imagen-grid">
           <div className="cta-imagen-texto">
             <p>Estamos disponibles para atenderte ahora mismo.</p>
-
             <p>
               Somos especialistas en cristales a medida, ofreciendo soluciones
               de vidrio que combinan diseño, seguridad y funcionalidad.
@@ -68,7 +66,6 @@ export default function Inicio() {
 
             <div className="cta-botones">
               <a href="tel:+34955631356" className="btn">Llamar ahora</a>
-
               <a
                 href="https://wa.me/34659521144"
                 target="_blank"
@@ -124,22 +121,18 @@ export default function Inicio() {
         {/* MÉTRICAS */}
         <section className="metricas-full">
           <div className="metricas-grid">
-
             <div className="metrica">
               <h3>+30 Años de Experiencia</h3>
               <p>Trayectoria consolidada en cristalería profesional</p>
             </div>
-
             <div className="metrica">
               <h3>+100k Montajes Completados</h3>
               <p>Instalaciones realizadas en hogares y negocios</p>
             </div>
-
             <div className="metrica">
               <h3>7 Premios por Calidad</h3>
               <p>Reconocimientos por excelencia en producto y servicio</p>
             </div>
-
           </div>
         </section>
 
@@ -147,8 +140,6 @@ export default function Inicio() {
 
       {/* CONTACTO FINAL */}
       <section className="cierre-contacto">
-
-        {/* TEXTO ESCRITORIO */}
         <p className="texto-desktop">
           Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
           <a href="mailto:cristaleria@cristaleriazamorano.com" className="correo-destacado">
@@ -158,7 +149,6 @@ export default function Inicio() {
           y te responderemos a la mayor brevedad posible.
         </p>
 
-        {/* TEXTO MÓVIL */}
         <p className="texto-mobile">
           Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
           <a 
@@ -170,11 +160,8 @@ export default function Inicio() {
           <br />
           <span className="correo-respuesta">Te responderemos a la mayor brevedad posible.</span>
         </p>
-
       </section>
 
     </div>
   );
 }
-
-

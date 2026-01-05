@@ -204,7 +204,6 @@
   padding: 40px 0;
 }
 
-/* GRID FINAL */
 .grid-final {
   max-width: 1100px;
   margin: 0 auto 20px;
@@ -212,16 +211,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  align-items: start; /* ✅ Alineación vertical */
 }
 
-/* BLOQUES BLANCOS */
 .bloque-barrio {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 0;
+  border-radius: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: transparent;
+}
+
+.bloque-barrio:nth-child(2) {
+  margin-top: 6px; /* ✅ Ajuste fino para alinear con beneficios */
 }
 
 /* BENEFICIOS */
@@ -255,10 +258,7 @@
   font-weight: bold;
 }
 
-/* ========================= */
 /* MÉTRICAS — NUEVA ESTRUCTURA */
-/* ========================= */
-
 .metricas-superior {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -341,10 +341,6 @@
   }
 }
 
-/* ========================= */
-/* MÓVIL */
-/* ========================= */
-
 @media (max-width: 600px) {
 
   .hero-camas {
@@ -382,5 +378,15 @@
   .beneficios li {
     padding-left: 20px;
   }
-}
 
+  /* FIX RESPONSIVE MÉTRICAS */
+  .metricas-superior {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .metrica-inferior {
+    display: flex;
+    justify-content: center;
+    margin-top:

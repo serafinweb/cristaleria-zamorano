@@ -211,7 +211,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  align-items: start; /* ✅ Alineación vertical */
+  align-items: start;
 }
 
 .bloque-barrio {
@@ -224,7 +224,7 @@
 }
 
 .bloque-barrio:nth-child(2) {
-  margin-top: 6px; /* ✅ Ajuste fino para alinear con beneficios */
+  margin-top: 6px;
 }
 
 /* BENEFICIOS */
@@ -258,7 +258,7 @@
   font-weight: bold;
 }
 
-/* MÉTRICAS — NUEVA ESTRUCTURA */
+/* MÉTRICAS */
 .metricas-superior {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -389,4 +389,6 @@
   .metrica-inferior {
     display: flex;
     justify-content: center;
-    margin-top:
+    margin-top: 20px; /* ← AQUÍ ESTABA EL ERROR */
+  }
+}

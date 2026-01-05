@@ -277,6 +277,7 @@ body {
 }
 
 /* BENEFICIOS */
+
 .se-bloque .beneficios {
   list-style: none;
   padding: 0;
@@ -309,6 +310,7 @@ body {
 }
 
 /* MÉTRICAS */
+
 .se-bloque .metricas-superior {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -454,7 +456,7 @@ body {
 }
 
 /* ========================================================= */
-/* TÍTULO EN MÓVIL — 3 LÍNEAS (MISMO SISTEMA QUE LOS REMEDIOS) */
+/* TÍTULO EN MÓVIL — 3 LÍNEAS */
 /* ========================================================= */
 
 @media (max-width: 600px) {
@@ -482,5 +484,27 @@ body {
     max-width: 85%;
     margin: 0 auto;
     text-align: center;
+  }
+}
+
+/* ========================================================= */
+/* BOTONES — MÓVIL EN COLUMNA */
+/* ========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero-botones {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .hero-botones .hero-btn,
+  .hero-botones .hero-whatsapp {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+    padding: 12px 18px;
+    font-size: 1rem;
   }
 }

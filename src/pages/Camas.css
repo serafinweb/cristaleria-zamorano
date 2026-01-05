@@ -51,7 +51,7 @@
 }
 
 /* ========================= */
-/* TÍTULO — IGUAL QUE DOS HERMANAS */
+/* TÍTULO */
 /* ========================= */
 
 .titulo-camas {
@@ -420,7 +420,6 @@
 
 @media (max-width: 600px) {
 
-  /* TÍTULO EN MÓVIL — GRANDE COMO DOS HERMANAS */
   .titulo-camas {
     font-size: 2.6rem !important;
     line-height: 1.05 !important;
@@ -480,5 +479,26 @@
 
   .cm-bloque .cierre-contacto {
     margin-top: 50px;
+  }
+}
+
+/* ========================= */
+/* BOTONES — AJUSTE PARA QUE NO SOBRESALGAN */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  .hero-botones .hero-btn,
+  .hero-botones .hero-whatsapp,
+  .cm-bloque .cta-botones .btn,
+  .cm-bloque .cta-botones .whatsapp {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    max-width: 140px;
+    white-space: nowrap;
+  }
+
+  .hero-botones {
+    gap: 10px;
   }
 }

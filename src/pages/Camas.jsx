@@ -87,11 +87,11 @@ export default function Camas() {
       {/* BLOQUE AZUL — BENEFICIOS + MÉTRICAS */}
       <div className="seccion-azul">
 
-        <section className="grid-beneficios-metricas">
+        <section className="grid-final">
 
           {/* BENEFICIOS (IZQUIERDA) */}
-          <div className="beneficios">
-            <ul>
+          <div className="bloque-barrio">
+            <ul className="beneficios">
               <li>Atención inmediata en Camas y zonas cercanas</li>
               <li>Instalación profesional de cristales, espejos y mamparas</li>
               <li>Reparaciones urgentes con desplazamiento rápido</li>
@@ -101,7 +101,7 @@ export default function Camas() {
           </div>
 
           {/* MÉTRICAS (DERECHA) */}
-          <div className="metricas-finales">
+          <div className="bloque-barrio">
             <div className="metricas-grid">
               <div className="metrica">
                 <h3>+30 Años de Experiencia</h3>
@@ -122,16 +122,37 @@ export default function Camas() {
 
       </div>
 
-      {/* CONTACTO FINAL */}
+      {/* CONTACTO FINAL — IGUAL QUE INICIO */}
       <section className="cierre-contacto">
-        <p>
+
+        {/* ESCRITORIO */}
+        <p className="texto-desktop">
           Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
-          <a href="mailto:cristaleria@cristaleriazamorano.com" className="correo-destacado">
+          <a
+            href="mailto:cristaleria@cristaleriazamorano.com"
+            className="correo-destacado"
+          >
             cristaleria@cristaleriazamorano.com
           </a>
           <br />
           y te responderemos a la mayor brevedad posible.
         </p>
+
+        {/* MÓVIL */}
+        <p className="texto-mobile">
+          Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
+          <a
+            href="mailto:cristaleria@cristaleriazamorano.com"
+            className="btn correo-mobile"
+          >
+            Enviar correo
+          </a>
+          <br />
+          <span className="correo-respuesta">
+            Te responderemos a la mayor brevedad posible.
+          </span>
+        </p>
+
       </section>
 
     </div>

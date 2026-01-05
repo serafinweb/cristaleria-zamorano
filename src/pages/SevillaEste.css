@@ -148,15 +148,15 @@ body {
 }
 
 /* ========================================================= */
-/* CTA + IMAGEN */
+/* CTA + IMAGEN — ENCAPSULADO */
 /* ========================================================= */
 
-.cta-imagen {
+.se-bloque .cta-imagen {
   margin-top: 60px;
   margin-bottom: 60px;
 }
 
-.cta-titulo {
+.se-bloque .cta-titulo {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
@@ -164,26 +164,26 @@ body {
   margin-bottom: 30px;
 }
 
-.cta-imagen-grid {
+.se-bloque .cta-imagen-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
 }
 
-.cta-imagen-texto {
+.se-bloque .cta-imagen-texto {
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
 }
 
-.cta-imagen-texto p {
+.se-bloque .cta-imagen-texto p {
   color: #222;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.cta-botones {
+.se-bloque .cta-botones {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -191,7 +191,7 @@ body {
   flex-wrap: wrap;
 }
 
-.cta-imagen-foto img {
+.se-bloque .cta-imagen-foto img {
   width: 100%;
   height: auto;
   max-height: 380px;
@@ -299,7 +299,7 @@ body {
 }
 
 /* ========================================================= */
-/* CONTACTO FINAL — CORREGIDO */
+/* CONTACTO FINAL */
 /* ========================================================= */
 
 .se-bloque .cierre-contacto {

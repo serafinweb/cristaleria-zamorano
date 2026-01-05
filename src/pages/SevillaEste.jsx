@@ -51,39 +51,41 @@ export default function SevillaEste() {
       {/* SERVICIOS */}
       <Services />
 
-      {/* CTA + IMAGEN */}
-      <section className="cta-imagen">
-        <h3 className="cta-titulo">¿Necesitas un cristal urgente en Sevilla Este?</h3>
+      {/* CTA + IMAGEN — ENCAPSULADO */}
+      <div className="se-bloque">
+        <section className="cta-imagen">
+          <h3 className="cta-titulo">¿Necesitas un cristal urgente en Sevilla Este?</h3>
 
-        <div className="cta-imagen-grid">
-          <div className="cta-imagen-texto">
-            <p>Estamos disponibles para atenderte ahora mismo.</p>
+          <div className="cta-imagen-grid">
+            <div className="cta-imagen-texto">
+              <p>Estamos disponibles para atenderte ahora mismo.</p>
 
-            <p>
-              Somos especialistas en cristales a medida, ofreciendo soluciones de vidrio
-              que combinan diseño, seguridad y funcionalidad. Transformamos tu hogar o
-              negocio con materiales de primera calidad y acabados impecables.
-            </p>
+              <p>
+                Somos especialistas en cristales a medida, ofreciendo soluciones de vidrio
+                que combinan diseño, seguridad y funcionalidad. Transformamos tu hogar o
+                negocio con materiales de primera calidad y acabados impecables.
+              </p>
 
-            <div className="cta-botones">
-              <a href="tel:+34955631356" className="btn">Llamar ahora</a>
+              <div className="cta-botones">
+                <a href="tel:+34955631356" className="btn">Llamar ahora</a>
 
-              <a
-                href="https://wa.me/34659521144"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn whatsapp"
-              >
-                WhatsApp
-              </a>
+                <a
+                  href="https://wa.me/34659521144"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn whatsapp"
+                >
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div className="cta-imagen-foto">
+              <img src={trabajoCristal} alt="Trabajo de cristalería en Sevilla Este" />
             </div>
           </div>
-
-          <div className="cta-imagen-foto">
-            <img src={trabajoCristal} alt="Trabajo de cristalería en Sevilla Este" />
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* BLOQUE AZUL — BENEFICIOS + MÉTRICAS */}
       <div className="se-bloque">

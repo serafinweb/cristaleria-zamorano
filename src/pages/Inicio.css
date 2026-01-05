@@ -1,4 +1,7 @@
+/* ========================= */
 /* CONTENEDOR GENERAL */
+/* ========================= */
+
 .page {
   width: 100%;
   display: flex;
@@ -8,10 +11,21 @@
 }
 
 /* ========================= */
+/* BLOQUE ENCAPSULADOR HOME */
+/* ========================= */
+
+.inicio-bloque {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ========================= */
 /* HERO SEVILLA */
 /* ========================= */
 
-.hero-sevilla {
+.inicio-bloque .hero-sevilla {
   position: relative;
   width: 100%;
   height: 420px;
@@ -19,14 +33,14 @@
   border-radius: 0 0 10px 10px;
 }
 
-.hero-sevilla img {
+.inicio-bloque .hero-sevilla img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.55);
 }
 
-.hero-text {
+.inicio-bloque .hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -38,22 +52,22 @@
   padding: 0 10px;
 }
 
-.text-gradient {
+.inicio-bloque .text-gradient {
   background: linear-gradient(90deg, #ffffff, #d9eaff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.fade-in {
+.inicio-bloque .fade-in {
   animation: fadeIn 1.2s ease forwards;
 }
 
-.fade-in-sub {
+.inicio-bloque .fade-in-sub {
   opacity: 0;
   animation: fadeIn 1.4s ease forwards;
 }
 
-.fade-in-btn {
+.inicio-bloque .fade-in-btn {
   opacity: 0;
   animation: fadeIn 1.6s ease forwards;
 }
@@ -63,15 +77,15 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-botones {
+.inicio-bloque .hero-botones {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 15px;
 }
 
-.hero-btn,
-.hero-whatsapp {
+.inicio-bloque .hero-btn,
+.inicio-bloque .hero-whatsapp {
   padding: 12px 22px;
   border-radius: 6px;
   font-weight: 700;
@@ -80,25 +94,25 @@
   transition: 0.2s ease;
 }
 
-.hero-btn {
+.inicio-bloque .hero-btn {
   background: #075196;
   color: white;
 }
 
-.hero-btn:hover {
+.inicio-bloque .hero-btn:hover {
   background: #063f75;
 }
 
-.hero-whatsapp {
+.inicio-bloque .hero-whatsapp {
   background: #25d366;
   color: white;
 }
 
-.hero-whatsapp:hover {
+.inicio-bloque .hero-whatsapp:hover {
   background: #1ebe5a;
 }
 
-.hero-subtext {
+.inicio-bloque .hero-subtext {
   display: block;
   margin-top: 10px;
   font-size: 0.85rem;
@@ -109,19 +123,19 @@
 /* CONTENIDO PRINCIPAL */
 /* ========================= */
 
-.page-content {
+.inicio-bloque .page-content {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.page-content h2 {
+.inicio-bloque .page-content h2 {
   color: #075196;
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
 
-.page-content p {
+.inicio-bloque .page-content p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
@@ -131,39 +145,39 @@
 /* CTA + IMAGEN */
 /* ========================= */
 
-.cta-imagen {
+.inicio-bloque .cta-imagen {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.cta-titulo {
+.inicio-bloque .cta-titulo {
   text-align: center;
   color: #075196;
   font-size: 1.6rem;
   margin-bottom: 25px;
 }
 
-.cta-imagen-grid {
+.inicio-bloque .cta-imagen-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   align-items: center;
 }
 
-.cta-imagen-texto p {
+.inicio-bloque .cta-imagen-texto p {
   margin-bottom: 15px;
   line-height: 1.7;
   color: #333;
 }
 
-.cta-botones {
+.inicio-bloque .cta-botones {
   margin-top: 15px;
   display: flex;
   gap: 15px;
 }
 
-.cta-botones .btn {
+.inicio-bloque .cta-botones .btn {
   padding: 12px 22px;
   border-radius: 6px;
   background: #075196;
@@ -173,19 +187,19 @@
   transition: 0.2s ease;
 }
 
-.cta-botones .btn:hover {
+.inicio-bloque .cta-botones .btn:hover {
   background: #063f75;
 }
 
-.cta-botones .whatsapp {
+.inicio-bloque .cta-botones .whatsapp {
   background: #25d366;
 }
 
-.cta-botones .whatsapp:hover {
+.inicio-bloque .cta-botones .whatsapp:hover {
   background: #1ebe5a;
 }
 
-.cta-imagen-foto img {
+.inicio-bloque .cta-imagen-foto img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
@@ -193,26 +207,27 @@
 }
 
 /* ========================= */
-/* BLOQUE AZUL CLARO */
+/* BLOQUE AZUL */
 /* ========================= */
 
-.seccion-azul {
+.inicio-bloque .seccion-azul {
   background: #f3f8ff;
   padding: 40px 0;
+  border-radius: 10px;
 }
 
 /* ========================= */
 /* MAPA + BENEFICIOS */
 /* ========================= */
 
-.seccion-final {
+.inicio-bloque .seccion-final {
   max-width: 1100px;
   margin: 0 auto 20px;
   padding: 0 20px;
   box-sizing: border-box;
 }
 
-.grid-final {
+.inicio-bloque .grid-final {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -220,7 +235,7 @@
 }
 
 /* MAPA */
-.mapa-cuadro {
+.inicio-bloque .mapa-cuadro {
   background: white;
   border-radius: 10px;
   padding: 20px;
@@ -229,13 +244,13 @@
   flex-direction: column;
 }
 
-.mapa-cuadro h3 {
+.inicio-bloque .mapa-cuadro h3 {
   margin-bottom: 15px;
   color: #075196;
   font-size: 1.4rem;
 }
 
-.mapa-cuadro iframe {
+.inicio-bloque .mapa-cuadro iframe {
   flex: 1;
   border-radius: 8px;
   width: 100%;
@@ -245,7 +260,7 @@
 }
 
 /* BENEFICIOS */
-.beneficios ul {
+.inicio-bloque .beneficios ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -253,7 +268,7 @@
   gap: 12px;
 }
 
-.beneficios li {
+.inicio-bloque .beneficios li {
   background: white;
   padding: 12px 26px;
   padding-left: 42px;
@@ -264,8 +279,7 @@
   position: relative;
 }
 
-/* TICK ESCRITORIO */
-.beneficios li::before {
+.inicio-bloque .beneficios li::before {
   content: "✔";
   position: absolute;
   left: 16px;
@@ -280,62 +294,63 @@
 /* MÉTRICAS */
 /* ========================= */
 
-.metricas-full {
+.inicio-bloque .metricas-full {
   max-width: 1100px;
   margin: 0 auto 40px;
   padding: 0 20px;
 }
 
-.metricas-full .metricas-grid {
+.inicio-bloque .metricas-full .metricas-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
-.metrica {
+.inicio-bloque .metrica {
   background: white;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
 }
 
-.metrica h3 {
+.inicio-bloque .metrica h3 {
   color: #075196;
   margin-bottom: 10px;
 }
 
 /* ========================= */
-/* CIERRE CONTACTO */
+/* CONTACTO FINAL — IGUAL QUE LOS BARRIOS */
 /* ========================= */
 
-.cierre-contacto {
+.inicio-bloque .cierre-contacto {
   max-width: 1100px;
-  margin: 0 auto 30px;
-  padding: 0 20px;
+  margin: 40px auto 30px;
+  padding: 16px 20px;
   text-align: center;
   line-height: 1.7;
+  background: #f7fbff;
+  border: 1px solid #d6e6ff;
+  border-radius: 8px;
 }
 
-.cierre-contacto p {
+.inicio-bloque .cierre-contacto p {
   max-width: 100%;
   margin: 0 auto;
 }
 
-/* TEXTO ESCRITORIO */
-.texto-desktop {
+.inicio-bloque .texto-desktop {
   display: block;
 }
 
-/* TEXTO MÓVIL */
-.texto-mobile {
+.inicio-bloque .texto-mobile {
   display: none;
 }
 
-.correo-mobile {
+.inicio-bloque .correo-mobile {
   display: none;
 }
 
-.correo-destacado {
+.inicio-bloque .correo-destacado {
   max-width: 100%;
   display: inline-block;
   font-size: 0.85rem;
@@ -345,7 +360,7 @@
   overflow-wrap: anywhere;
 }
 
-.correo-respuesta {
+.inicio-bloque .correo-respuesta {
   display: block;
   margin-top: 12px;
 }
@@ -355,19 +370,19 @@
 /* ========================= */
 
 @media (max-width: 900px) {
-  .cta-imagen-grid {
+  .inicio-bloque .cta-imagen-grid {
     grid-template-columns: 1fr;
   }
 
-  .grid-final {
+  .inicio-bloque .grid-final {
     grid-template-columns: 1fr;
   }
 
-  .metricas-full .metricas-grid {
+  .inicio-bloque .metricas-full .metricas-grid {
     grid-template-columns: 1fr;
   }
 
-  .mapa-cuadro iframe {
+  .inicio-bloque .mapa-cuadro iframe {
     height: 260px;
   }
 }
@@ -378,19 +393,19 @@
 
 @media (max-width: 600px) {
 
-  .hero-sevilla {
+  .inicio-bloque .hero-sevilla {
     height: 320px;
   }
 
-  .texto-desktop {
+  .inicio-bloque .texto-desktop {
     display: none;
   }
 
-  .texto-mobile {
+  .inicio-bloque .texto-mobile {
     display: block;
   }
 
-  .correo-mobile {
+  .inicio-bloque .correo-mobile {
     display: inline-block;
     margin-top: 10px;
     background: #075196;
@@ -402,25 +417,23 @@
     font-size: 0.9rem;
   }
 
-  .correo-mobile:hover {
+  .inicio-bloque .correo-mobile:hover {
     background: #063f75;
   }
 
-  .metricas-full {
+  .inicio-bloque .metricas-full {
     margin-bottom: 20px;
   }
 
-  .cierre-contacto {
-    margin-top: 10px;
+  .inicio-bloque .cierre-contacto {
+    margin-top: 50px;
   }
 
-  /* QUITAR TICKS EN MÓVIL */
-  .beneficios li::before {
+  .inicio-bloque .beneficios li::before {
     content: "";
   }
 
-  /* AJUSTAR PADDING PARA QUE NO QUEDE HUECO */
-  .beneficios li {
+  .inicio-bloque .beneficios li {
     padding-left: 20px;
   }
 }

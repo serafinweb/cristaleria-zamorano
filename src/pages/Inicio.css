@@ -165,16 +165,24 @@
   align-items: center;
 }
 
+.inicio-bloque .cta-imagen-texto {
+  text-align: center;
+}
+
 .inicio-bloque .cta-imagen-texto p {
   margin-bottom: 15px;
   line-height: 1.7;
   color: #333;
 }
 
+/* 🔥 CORREGIDO: BOTONES CENTRADOS */
 .inicio-bloque .cta-botones {
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
+  justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .inicio-bloque .cta-botones .btn {
@@ -319,7 +327,7 @@
 }
 
 /* ========================= */
-/* CONTACTO FINAL — IGUAL QUE LOS BARRIOS */
+/* CONTACTO FINAL */
 /* ========================= */
 
 .inicio-bloque .cierre-contacto {

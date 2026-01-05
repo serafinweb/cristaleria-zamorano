@@ -154,16 +154,24 @@
   align-items: center;
 }
 
+.cm-bloque .cta-imagen-texto {
+  text-align: center;
+}
+
 .cm-bloque .cta-imagen-texto p {
   margin-bottom: 15px;
   line-height: 1.7;
   color: #333;
 }
 
+/* 🔥 CORREGIDO: BOTONES CENTRADOS */
 .cm-bloque .cta-botones {
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
+  justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .cm-bloque .cta-botones .btn {

@@ -273,6 +273,28 @@ body {
   overflow: hidden;
 }
 
+/* ⭐ TÍTULO DEL MAPA — centrado en escritorio + tamaño correcto */
+.mapa-cuadro h3 {
+  color: #075196;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+/* ⭐ TÍTULO DEL MAPA — versión móvil */
+@media (max-width: 600px) {
+  .mapa-cuadro h3 {
+    font-size: 1.6rem;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
 .beneficios ul {
   list-style: none;
   padding: 0;
@@ -477,7 +499,7 @@ body {
 }
 
 /* ========================================================= */
-/* BOTONES — MÓVIL EN COLUMNA (NUEVO ESTÁNDAR) */
+/* BOTONES — MÓVIL EN COLUMNA */
 /* ========================================================= */
 
 @media (max-width: 600px) {

@@ -157,7 +157,7 @@ export default function Inicio() {
             <div className="grid-final">
 
               <div className="mapa-cuadro">
-                <h3>¿Dónde estamos?</h3>
+                <h3 className="fade-in">¿Dónde estamos?</h3>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.833097932983!2d-5.987684523556016!3d37.37788527207871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126e9e6f4adc19%3A0x2a61b6a8ff90eb1a!2sCristaler%C3%ADa%20Zamorano!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
                   width="100%"

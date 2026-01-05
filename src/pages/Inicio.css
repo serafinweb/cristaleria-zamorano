@@ -261,6 +261,19 @@
   border-left: 4px solid #075196;
   font-size: 1rem;
   line-height: 1.55;
+  position: relative;
+}
+
+/* TICK ESCRITORIO */
+.beneficios li::before {
+  content: "✔";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #075196;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /* ========================= */
@@ -399,5 +412,15 @@
 
   .cierre-contacto {
     margin-top: 10px;
+  }
+
+  /* QUITAR TICKS EN MÓVIL */
+  .beneficios li::before {
+    content: "";
+  }
+
+  /* AJUSTAR PADDING PARA QUE NO QUEDE HUECO */
+  .beneficios li {
+    padding-left: 20px;
   }
 }

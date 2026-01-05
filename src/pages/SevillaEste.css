@@ -152,8 +152,9 @@ body {
 /* ========================================================= */
 
 .se-bloque .cta-imagen {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  max-width: 1100px;
+  margin: 30px auto 20px; /* 🔥 ULTRA COMPACTO */
+  padding: 0 20px;
 }
 
 .se-bloque .cta-titulo {
@@ -191,6 +192,29 @@ body {
   flex-wrap: wrap;
 }
 
+/* 🔥 BOTONES CTA ENCAPSULADOS */
+.se-bloque .cta-botones .btn {
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: #075196;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.se-bloque .cta-botones .btn:hover {
+  background: #063f75;
+}
+
+.se-bloque .cta-botones .whatsapp {
+  background: #25d366;
+}
+
+.se-bloque .cta-botones .whatsapp:hover {
+  background: #1ebe5a;
+}
+
 .se-bloque .cta-imagen-foto img {
   width: 100%;
   height: auto;
@@ -201,6 +225,7 @@ body {
   transform: scale(0.96);
   animation: fadeInScale 1s ease-out forwards;
   animation-delay: 0.3s;
+  margin-top: 0; /* 🔥 SIN MARGEN EXTRA */
 }
 
 @keyframes fadeInScale {
@@ -211,13 +236,13 @@ body {
 }
 
 /* ========================================================= */
-/* BLOQUE AZUL AISLADO */
+/* BLOQUE AZUL */
 /* ========================================================= */
 
 .se-bloque .seccion-azul {
   background: #f3f8ff;
   padding: 40px 0;
-  margin-top: 40px;
+  margin-top: 20px; /* 🔥 ULTRA COMPACTO */
   border-radius: 10px;
 }
 
@@ -355,6 +380,14 @@ body {
 /* ========================================================= */
 
 @media (max-width: 900px) {
+  .se-bloque .cta-imagen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .se-bloque .cta-imagen-foto img {
+    margin-top: 20px;
+  }
+
   .se-bloque .grid-final {
     grid-template-columns: 1fr;
   }

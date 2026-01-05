@@ -148,15 +148,16 @@ body {
 }
 
 /* ========================================================= */
-/* CTA + IMAGEN */
+/* CTA + IMAGEN — ENCAPSULADO */
 /* ========================================================= */
 
-.cta-imagen {
-  margin-top: 60px;
-  margin-bottom: 60px;
+.lr-bloque .cta-imagen {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-.cta-titulo {
+.lr-bloque .cta-titulo {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
@@ -164,26 +165,26 @@ body {
   margin-bottom: 30px;
 }
 
-.cta-imagen-grid {
+.lr-bloque .cta-imagen-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
 }
 
-.cta-imagen-texto {
+.lr-bloque .cta-imagen-texto {
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
 }
 
-.cta-imagen-texto p {
+.lr-bloque .cta-imagen-texto p {
   color: #222;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.cta-botones {
+.lr-bloque .cta-botones {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -191,7 +192,29 @@ body {
   flex-wrap: wrap;
 }
 
-.cta-imagen-foto img {
+.lr-bloque .cta-botones .btn {
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: #075196;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.lr-bloque .cta-botones .btn:hover {
+  background: #063f75;
+}
+
+.lr-bloque .cta-botones .whatsapp {
+  background: #25d366;
+}
+
+.lr-bloque .cta-botones .whatsapp:hover {
+  background: #1ebe5a;
+}
+
+.lr-bloque .cta-imagen-foto img {
   width: 100%;
   height: auto;
   max-height: 380px;
@@ -211,7 +234,7 @@ body {
 }
 
 /* ========================================================= */
-/* BLOQUE AZUL AISLADO */
+/* BLOQUE AZUL */
 /* ========================================================= */
 
 .lr-bloque .seccion-azul {
@@ -299,7 +322,7 @@ body {
 }
 
 /* ========================================================= */
-/* CONTACTO FINAL — CORREGIDO */
+/* CONTACTO FINAL */
 /* ========================================================= */
 
 .lr-bloque .cierre-contacto {
@@ -355,6 +378,14 @@ body {
 /* ========================================================= */
 
 @media (max-width: 900px) {
+  .lr-bloque .cta-imagen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lr-bloque .cta-imagen-foto img {
+    margin-top: 20px;
+  }
+
   .lr-bloque .grid-final {
     grid-template-columns: 1fr;
   }
@@ -406,52 +437,5 @@ body {
 
   .lr-bloque .cierre-contacto {
     margin-top: 50px;
-  }
-}
-
-/* ========================================================= */
-/* FOOTER */
-/* ========================================================= */
-
-.footer {
-  margin-top: 30px;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fafafa;
-  border-top: 1px solid #e5e5e5;
-  border-radius: 0 0 10px 10px;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.footer-left,
-.footer-right {
-  display: flex;
-  align-items: center;
-}
-
-.footer-left p {
-  margin: 0;
-  color: #444;
-}
-
-.footer-horario {
-  margin: 0;
-  color: #444;
-  font-size: 0.9rem;
-  text-align: right;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 6px;
-  }
-
-  .footer-horario {
-    text-align: center;
   }
 }

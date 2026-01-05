@@ -41,10 +41,9 @@ export default function SevillaEste() {
         <h2>Expertos en cristalería en Sevilla Este</h2>
         <p>
           Ofrecemos servicio profesional de cristalería en toda la zona de Sevilla Este:
-          Avenida de las Ciencias, Emilio Lemos, Sevilla Este Parque, Palacio de
-          Congresos, Alcosa y zonas cercanas. Instalamos cristales a medida, espejos,
-          mamparas, ventanas de aluminio y realizamos reparaciones urgentes con atención
-          rápida y personalizada.
+          Avenida de las Ciencias, Emilio Lemos, Parque Alcosa, Palacio de Congresos y
+          zonas cercanas. Instalamos cristales a medida, espejos, mamparas, ventanas de
+          aluminio y realizamos reparaciones urgentes con atención rápida y personalizada.
         </p>
       </section>
 

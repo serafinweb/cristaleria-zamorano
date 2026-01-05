@@ -49,42 +49,42 @@ export default function Camas() {
       {/* SERVICIOS */}
       <Services />
 
-      {/* CTA + IMAGEN */}
-      <section className="cta-imagen">
-        <h3 className="cta-titulo">¿Necesitas un cristal urgente en Camas?</h3>
-
-        <div className="cta-imagen-grid">
-          <div className="cta-imagen-texto">
-            <p>Estamos disponibles para atenderte ahora mismo.</p>
-            <p>
-              Somos especialistas en cristales a medida, ofreciendo soluciones de vidrio
-              que combinan diseño, seguridad y funcionalidad. Transformamos tu hogar o
-              negocio con materiales de primera calidad y acabados impecables.
-            </p>
-
-            <div className="cta-botones">
-              <a href="tel:+34955631356" className="btn">Llamar ahora</a>
-              <a
-                href="https://wa.me/34659521144"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn whatsapp"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div className="cta-imagen-foto">
-            <img src={trabajoCristal} alt="Trabajo de cristalería en Camas" />
-          </div>
-        </div>
-      </section>
-
-      {/* BLOQUE AZUL + CONTACTO (ENCAPSULADO COMO DOS HERMANAS) */}
+      {/* 🔥 TODO EL RESTO VA DENTRO DE .cm-bloque */}
       <div className="cm-bloque">
 
-        {/* BLOQUE AZUL — BENEFICIOS + MÉTRICAS */}
+        {/* CTA + IMAGEN */}
+        <section className="cta-imagen">
+          <h3 className="cta-titulo">¿Necesitas un cristal urgente en Camas?</h3>
+
+          <div className="cta-imagen-grid">
+            <div className="cta-imagen-texto">
+              <p>Estamos disponibles para atenderte ahora mismo.</p>
+              <p>
+                Somos especialistas en cristales a medida, ofreciendo soluciones de vidrio
+                que combinan diseño, seguridad y funcionalidad. Transformamos tu hogar o
+                negocio con materiales de primera calidad y acabados impecables.
+              </p>
+
+              <div className="cta-botones">
+                <a href="tel:+34955631356" className="btn">Llamar ahora</a>
+                <a
+                  href="https://wa.me/34659521144"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn whatsapp"
+                >
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div className="cta-imagen-foto">
+              <img src={trabajoCristal} alt="Trabajo de cristalería en Camas" />
+            </div>
+          </div>
+        </section>
+
+        {/* BLOQUE AZUL */}
         <div className="seccion-azul">
           <section className="grid-final">
 
@@ -126,7 +126,7 @@ export default function Camas() {
           </section>
         </div>
 
-        {/* CONTACTO FINAL — AHORA DENTRO DEL BLOQUE */}
+        {/* CONTACTO FINAL */}
         <section className="cierre-contacto">
 
           {/* ESCRITORIO */}
@@ -159,7 +159,7 @@ export default function Camas() {
 
         </section>
 
-      </div>
+      </div> {/* FIN cm-bloque */}
 
     </div>
   );

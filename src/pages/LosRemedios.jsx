@@ -50,42 +50,44 @@ export default function LosRemedios() {
       {/* SERVICIOS */}
       <Services />
 
-      {/* CTA + IMAGEN */}
-      <section className="cta-imagen">
-        <h3 className="cta-titulo">¿Necesitas un cristal urgente en Los Remedios?</h3>
+      {/* 🔥 TODO VA DENTRO DE lr-bloque */}
+      <div className="lr-bloque">
 
-        <div className="cta-imagen-grid">
-          <div className="cta-imagen-texto">
-            <p>Estamos disponibles para atenderte ahora mismo.</p>
+        {/* CTA + IMAGEN */}
+        <section className="cta-imagen">
+          <h3 className="cta-titulo">¿Necesitas un cristal urgente en Los Remedios?</h3>
 
-            <p>
-              Somos especialistas en cristales a medida, ofreciendo soluciones de vidrio
-              que combinan diseño, seguridad y funcionalidad. Transformamos tu hogar o
-              negocio con materiales de primera calidad y acabados impecables.
-            </p>
+          <div className="cta-imagen-grid">
+            <div className="cta-imagen-texto">
+              <p>Estamos disponibles para atenderte ahora mismo.</p>
 
-            <div className="cta-botones">
-              <a href="tel:+34955631356" className="btn">Llamar ahora</a>
+              <p>
+                Somos especialistas en cristales a medida, ofreciendo soluciones de vidrio
+                que combinan diseño, seguridad y funcionalidad. Transformamos tu hogar o
+                negocio con materiales de primera calidad y acabados impecables.
+              </p>
 
-              <a
-                href="https://wa.me/34659521144"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn whatsapp"
-              >
-                WhatsApp
-              </a>
+              <div className="cta-botones">
+                <a href="tel:+34955631356" className="btn">Llamar ahora</a>
+
+                <a
+                  href="https://wa.me/34659521144"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn whatsapp"
+                >
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div className="cta-imagen-foto">
+              <img src={trabajoCristal} alt="Trabajo de cristalería en Los Remedios" />
             </div>
           </div>
+        </section>
 
-          <div className="cta-imagen-foto">
-            <img src={trabajoCristal} alt="Trabajo de cristalería en Los Remedios" />
-          </div>
-        </div>
-      </section>
-
-      {/* BLOQUE AZUL — BENEFICIOS + MÉTRICAS */}
-      <div className="lr-bloque">
+        {/* BLOQUE AZUL */}
         <div className="seccion-azul">
           <section className="grid-final">
 
@@ -100,7 +102,7 @@ export default function LosRemedios() {
               </ul>
             </div>
 
-            {/* MÉTRICAS — 2 ARRIBA + 1 ABAJO */}
+            {/* MÉTRICAS */}
             <div className="bloque-barrio">
 
               <div className="metricas-superior">
@@ -159,7 +161,8 @@ export default function LosRemedios() {
           </p>
 
         </section>
-      </div>
+
+      </div> {/* FIN lr-bloque */}
 
     </div>
   );

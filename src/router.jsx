@@ -11,6 +11,9 @@ import Inicio from "./pages/Inicio";
 import AvisoLegal from "./pages/AvisoLegal";
 import Privacidad from "./pages/Privacidad";
 
+// 👉 IMPORTA LA NUEVA PÁGINA
+import Servicios from "./pages/Servicios";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +25,9 @@ const router = createBrowserRouter([
       { path: "/dos-hermanas", element: <DosHermanas /> },
       { path: "/los-remedios", element: <LosRemedios /> },
       { path: "/sevilla-este", element: <SevillaEste /> },
+
+      // 👉 NUEVA RUTA
+      { path: "/servicios", element: <Servicios /> },
 
       // Páginas legales
       { path: "/aviso-legal", element: <AvisoLegal /> },

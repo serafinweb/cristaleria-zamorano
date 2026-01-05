@@ -19,7 +19,6 @@ export default function Camas() {
             <a href="tel:+34955631356" className="btn hero-btn fade-in-btn">
               ¡Llama ahora!
             </a>
-
             <a
               href="https://wa.me/34659521144"
               target="_blank"
@@ -57,7 +56,6 @@ export default function Camas() {
         <div className="cta-imagen-grid">
           <div className="cta-imagen-texto">
             <p>Estamos disponibles para atenderte ahora mismo.</p>
-
             <p>
               Somos especialistas en cristales a medida, ofreciendo soluciones de vidrio
               que combinan diseño, seguridad y funcionalidad. Transformamos tu hogar o
@@ -66,7 +64,6 @@ export default function Camas() {
 
             <div className="cta-botones">
               <a href="tel:+34955631356" className="btn">Llamar ahora</a>
-
               <a
                 href="https://wa.me/34659521144"
                 target="_blank"
@@ -86,7 +83,6 @@ export default function Camas() {
 
       {/* BLOQUE AZUL — BENEFICIOS + MÉTRICAS */}
       <div className="seccion-azul">
-
         <section className="grid-final">
 
           {/* BENEFICIOS (IZQUIERDA) */}
@@ -104,25 +100,24 @@ export default function Camas() {
           <div className="bloque-barrio">
             <div className="metricas-grid">
               <div className="metrica">
-                <h3>+30 Años de Experiencia</h3>
+                <h3>30 Años de Experiencia</h3>
                 <p>Trayectoria consolidada en cristalería profesional</p>
               </div>
               <div className="metrica">
-                <h3>+100k Montajes Completados</h3>
+                <h3>100k Montajes Completados</h3>
                 <p>Instalaciones realizadas en hogares y negocios</p>
               </div>
               <div className="metrica">
-                <h3>+7 Premios por Calidad</h3>
+                <h3>7 Premios por Calidad</h3>
                 <p>Reconocimientos por excelencia en producto y servicio</p>
               </div>
             </div>
           </div>
 
         </section>
-
       </div>
 
-      {/* CONTACTO FINAL — IGUAL QUE INICIO */}
+      {/* CONTACTO FINAL */}
       <section className="cierre-contacto">
 
         {/* ESCRITORIO */}

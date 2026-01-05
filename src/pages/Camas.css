@@ -256,7 +256,7 @@
   font-weight: bold;
 }
 
-/* MÉTRICAS — FIX APLICADO */
+/* MÉTRICAS — APILADAS */
 .metricas-grid {
   display: flex;
   flex-direction: column;
@@ -325,10 +325,6 @@
   }
 
   .grid-final {
-    grid-template-columns: 1fr;
-  }
-
-  .metricas-grid {
     grid-template-columns: 1fr;
   }
 

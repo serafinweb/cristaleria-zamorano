@@ -108,11 +108,11 @@ export default function Camas() {
                 <p>Trayectoria consolidada en cristalería profesional</p>
               </div>
               <div className="metrica">
-                <h3>+600k Montajes Completados</h3>
+                <h3>+100k Montajes Completados</h3>
                 <p>Instalaciones realizadas en hogares y negocios</p>
               </div>
               <div className="metrica">
-                <h3>+20 Premios por Calidad</h3>
+                <h3>+7 Premios por Calidad</h3>
                 <p>Reconocimientos por excelencia en producto y servicio</p>
               </div>
             </div>

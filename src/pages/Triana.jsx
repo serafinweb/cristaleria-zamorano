@@ -200,10 +200,10 @@ export default function Triana() {
           <p className="texto-desktop">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
             <a
-              href="mailto:cristaleria@cristalereriasevilla.com"
+              href="mailto:cristaleria@cristaleriazamorano.com"
               className="correo-destacado"
             >
-              cristaleria@cristalereriasevilla.com
+              cristaleria@cristaleriazamorano.com
             </a>
             <br />
             y te responderemos a la mayor brevedad posible.
@@ -212,7 +212,7 @@ export default function Triana() {
           <p className="texto-mobile">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
             <a
-              href="mailto:cristaleria@cristalereriasevilla.com"
+              href="mailto:cristaleria@cristaleriazamorano.com"
               className="btn correo-mobile"
             >
               Enviar correo

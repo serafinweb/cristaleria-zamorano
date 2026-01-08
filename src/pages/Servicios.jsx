@@ -223,10 +223,10 @@ export default function Servicios() {
           <p className="texto-desktop">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
             <a
-              href="mailto:cristaleria@cristaleriasevilla.com"
+              href="mailto:cristaleria@cristaleriazamorano.com"
               className="correo-destacado"
             >
-              cristaleria@cristaleriasevilla.com
+              cristaleria@cristaleriazamorano.com
             </a>
             <br />
             y te responderemos a la mayor brevedad posible.
@@ -236,7 +236,7 @@ export default function Servicios() {
           <p className="texto-mobile">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
             <a
-              href="mailto:cristaleria@cristaleriasevilla.com"
+              href="mailto:cristaleria@cristaleriazamorano.com"
               className="btn correo-mobile"
             >
               Enviar correo

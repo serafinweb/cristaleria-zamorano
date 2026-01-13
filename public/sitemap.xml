@@ -3,45 +3,45 @@
 
   <!-- Página principal -->
   <url>
-    <loc>https://cristaleriasevilla.com/</loc>
+    <loc>https://www.cristaleriasevilla.com/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <!-- Página de servicios -->
   <url>
-    <loc>https://cristaleriasevilla.com/servicios</loc>
+    <loc>https://www.cristaleriasevilla.com/servicios</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <!-- Barrios reales -->
   <url>
-    <loc>https://cristaleriasevilla.com/camas</loc>
+    <loc>https://www.cristaleriasevilla.com/camas</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://cristaleriasevilla.com/dos-hermanas</loc>
+    <loc>https://www.cristaleriasevilla.com/dos-hermanas</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://cristaleriasevilla.com/los-remedios</loc>
+    <loc>https://www.cristaleriasevilla.com/los-remedios</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://cristaleriasevilla.com/sevilla-este</loc>
+    <loc>https://www.cristaleriasevilla.com/sevilla-este</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://cristaleriasevilla.com/triana</loc>
+    <loc>https://www.cristaleriasevilla.com/triana</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>

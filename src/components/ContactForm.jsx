@@ -15,14 +15,30 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     setStatus("Enviando...");
-    setTimeout(() => {
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Error en el servidor');
+      }
+
       setStatus("¡Presupuesto solicitado con éxito! Nos pondremos en contacto con usted a la mayor brevedad posible para asesorarle.");
       setFormData({ nombre: "", telefono: "", email: "", servicio: "Hogar", mensaje: "" });
-    }, 1000);
+    } catch (error) {
+      console.error("Error enviando el formulario:", error);
+      setStatus("Hubo un error al enviar su solicitud. Por favor, inténtelo de nuevo o contacte por teléfono.");
+    }
   };
 
   return (

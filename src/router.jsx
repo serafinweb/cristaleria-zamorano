@@ -3,7 +3,7 @@ import App from "./App";
 
 // Páginas estándar
 import Inicio from "./pages/index";
-import Servicios from "./pages/servicios";
+import Servicios from "./pages/Servicios";
 import Contacto from "./pages/contacto";
 import SobreNosotros from "./pages/sobre-nosotros";
 import AvisoLegal from "./pages/aviso-legal";
@@ -11,11 +11,11 @@ import PoliticaPrivacidad from "./pages/politica-de-privacidad";
 import PoliticaCookies from "./pages/politica-de-cookies";
 
 // Zonas tradicionales
-import Camas from "./pages/camas";
+import Camas from "./pages/Camas";
 import DosHermanas from "./pages/dos-hermanas";
 import LosRemedios from "./pages/los-remedios";
 import SevillaEste from "./pages/sevilla-este";
-import Triana from "./pages/triana";
+import Triana from "./pages/Triana";
 
 // Zonas nuevas
 import Nervion from "./pages/nervion";

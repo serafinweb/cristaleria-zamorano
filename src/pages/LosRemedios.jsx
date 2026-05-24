@@ -63,7 +63,7 @@ export default function LosRemedios() {
     <div className="page">
 
       {/* HERO */}
-      <div className="hero-losremedios">
+      <div className="hero-los-remedios">
         <img
           src={heroLosRemedios}
           alt="Cristalería en Los Remedios – instalación de cristales a medida"
@@ -72,7 +72,7 @@ export default function LosRemedios() {
         <div className="hero-text">
 
           {/* TÍTULO — ESCRITORIO: 1 línea / MÓVIL: 3 líneas (via CSS) */}
-          <h1 className="fade-in text-gradient titulo-lr">
+          <h1 className="fade-in text-gradient titulo-los-remedios">
             Cristalería en Los Remedios
           </h1>
 

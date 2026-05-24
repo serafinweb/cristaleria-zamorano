@@ -1,70 +1,41 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 import "./Camas.css";
 import heroCamas from "../assets/Camas/hero-camas.png";
 import trabajoCristal from "../assets/Camas/cristaleria-trabajo.png";
 import Services from "../components/Services";
 
 export default function Camas() {
-
-  // ============================
-  // SEO DINÁMICO (React 19)
-  // ============================
-  useEffect(() => {
-    // TITLE
-    document.title = "Cristalería en Camas | Servicio Urgente y Cristales a Medida";
-
-    // META DESCRIPTION
-    let metaDescription = document.querySelector("meta[name='description']");
-    if (!metaDescription) {
-      metaDescription = document.createElement("meta");
-      metaDescription.name = "description";
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.content =
-      "Cristalería en Camas con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio. Atención inmediata y presupuesto en 24h.";
-
-    // CANONICAL
-    let canonical = document.querySelector("link[rel='canonical']");
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://cristaleriasevilla.com/camas";
-
-    // JSON-LD
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.innerHTML = `
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Cristalería Sevilla",
-      "image": "https://cristaleriasevilla.com/favicon.ico",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Camas, Sevilla",
-        "addressRegion": "Andalucía",
-        "addressCountry": "ES"
-      },
-      "url": "https://cristaleriasevilla.com/camas",
-      "telephone": "+34955631356",
-      "priceRange": "€€",
-      "description": "Cristalería en Camas con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio."
-    }
-    `;
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
-  // ============================
-  // JSX
-  // ============================
   return (
     <div className="page">
+      <Helmet>
+        <title>Cristalería en Camas | Servicio Urgente y Cristales a Medida</title>
+        <meta
+          name="description"
+          content="Cristalería en Camas con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio. Atención inmediata y presupuesto en 24h."
+        />
+        <link rel="canonical" href="https://cristaleriasevilla.com/camas" />
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Cristalería Zamorano",
+            "image": "https://cristaleriasevilla.com/favicon.ico",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Camas, Sevilla",
+              "addressRegion": "Andalucía",
+              "addressCountry": "ES"
+            },
+            "url": "https://cristaleriasevilla.com/camas",
+            "telephone": "+34955631356",
+            "priceRange": "€€",
+            "description": "Cristalería en Camas con servicio urgente. Instalación y reparación de cristales, espejos, mamparas y ventanas de aluminio."
+          }
+          `}
+        </script>
+      </Helmet>
 
       {/* HERO */}
       <div className="hero-camas">
@@ -76,7 +47,6 @@ export default function Camas() {
         <div className="hero-camas-overlay"></div>
 
         <div className="hero-text">
-
           {/* TÍTULO EN DOS LÍNEAS — IGUAL QUE DOS HERMANAS */}
           <h1 className="fade-in text-gradient titulo-camas">
             <span>Cristalería</span>
@@ -161,7 +131,6 @@ export default function Camas() {
         {/* BLOQUE AZUL */}
         <div className="seccion-azul">
           <section className="grid-final">
-
             {/* BENEFICIOS */}
             <div className="bloque-barrio">
               <ul className="beneficios">
@@ -175,7 +144,6 @@ export default function Camas() {
 
             {/* MÉTRICAS */}
             <div className="bloque-barrio">
-
               <div className="metricas-superior">
                 <div className="metrica">
                   <h3>100k Montajes Completados</h3>
@@ -194,15 +162,12 @@ export default function Camas() {
                   <p>Trayectoria consolidada en cristalería profesional</p>
                 </div>
               </div>
-
             </div>
-
           </section>
         </div>
 
         {/* CONTACTO FINAL */}
         <section className="cierre-contacto">
-
           {/* ESCRITORIO */}
           <p className="texto-desktop">
             Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
@@ -230,11 +195,8 @@ export default function Camas() {
               Te responderemos a la mayor brevedad posible.
             </span>
           </p>
-
         </section>
-
-      </div> {/* FIN cm-bloque */}
-
+      </div>
     </div>
   );
 }

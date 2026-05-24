@@ -1,254 +1,225 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import "./Servicios.css";
 
-// HERO
 import heroServicios from "../assets/servicios/hero-servicios.png";
-
-// IMÁGENES DE LOS SERVICIOS
 import imgCristales from "../assets/servicios/cristales-medida.png";
 import imgMamparas from "../assets/servicios/mamparas-bano.png";
 import imgEspejos from "../assets/servicios/espejos-personalizados.png";
 import imgVentanas from "../assets/servicios/ventanas-aluminio-pvc.png";
 import imgReparaciones from "../assets/servicios/reparaciones-urgentes.png";
 import imgUrgente from "../assets/servicios/servicio-urgente.png";
-
-// IMAGEN SECCIÓN DOS COLUMNAS
 import fotoServicios from "../assets/servicios/cristaleria-trabajo.png";
 
+import Hero from "../components/Hero";
+import CTA from "../components/CTA";
+
+const SERVICIOS_DETALLADOS = [
+  {
+    title: "Cristales a Medida",
+    description: "Corte e instalación de vidrios en cualquier espesor y formato. Vidrio templado para resistencia mecánica, laminado de seguridad anticaídas y doble acristalamiento Climalit. Ideal para mesas, repisas, escaparates o barandillas.",
+    image: imgCristales,
+    tag: "A medida"
+  },
+  {
+    title: "Mamparas de Baño",
+    description: "Mamparas de vidrio templado de seguridad (6 u 8 mm) con tratamientos antical de alta duración. Diseños minimalistas fijos, hojas abatibles, correderas o plegables con perfiles de aluminio anodizado o acero inoxidable.",
+    image: imgMamparas,
+    tag: "Diseño"
+  },
+  {
+    title: "Espejos Personalizados",
+    description: "Fabricación de espejos con cantos pulidos brillantes, biselados o con formas geométricas personalizadas. Diseñamos e instalamos espejos retroiluminados LED para baños y grandes superficies de espejo para gimnasios o vestidores.",
+    image: imgEspejos,
+    tag: "Decoración"
+  },
+  {
+    title: "Ventanas de Aluminio y PVC",
+    description: "Instalación de ventanas de alta gama con rotura de puente térmico (RPT) que aseguran un óptimo aislamiento térmico y acústico. Reduzca el consumo de calefacción y aire acondicionado instalando carpinterías eficientes.",
+    image: imgVentanas,
+    tag: "Aislamiento"
+  },
+  {
+    title: "Reparación de Escaparates",
+    description: "Sustitución inmediata de lunas y escaparates comerciales dañados por vandalismo, robos o accidentes. Instalamos vidrios antirrobo laminados homologados para garantizar la total seguridad de su negocio en el mismo día.",
+    image: imgReparaciones,
+    tag: "Comercio"
+  },
+  {
+    title: "Cerramientos de Cristal",
+    description: "Cortinas de cristal sin perfiles de aluminio verticales para terrazas, porches o balcones. Disfrute de vistas panorámicas ininterrumpidas y proteja su espacio de la lluvia y el viento sin alterar la fachada de su edificio.",
+    image: imgUrgente,
+    tag: "Cerramientos"
+  }
+];
+
+const ZONAS_ATENCION = [
+  { nombre: "Triana", path: "/triana" },
+  { nombre: "Los Remedios", path: "/los-remedios" },
+  { nombre: "Nervión", path: "/nervion" },
+  { nombre: "La Macarena", path: "/la-macarena" },
+  { nombre: "Sevilla Este", path: "/sevilla-este" },
+  { nombre: "San Bernardo", path: "/san-bernardo" },
+  { nombre: "Los Bermejales", path: "/los-bermejales" },
+  { nombre: "Bellavista", path: "/bellavista" },
+  { nombre: "Dos Hermanas", path: "/dos-hermanas" },
+  { nombre: "Camas", path: "/camas" },
+  { nombre: "Tomares", path: "/tomares" },
+  { nombre: "Mairena del Aljarafe", path: "/mairena-del-aljarafe" },
+  { nombre: "Bormujos", path: "/bormujos" },
+  { nombre: "Alcalá de Guadaíra", path: "/alcala-de-guadaira" }
+];
+
 export default function Servicios() {
-
-  // ============================
-  // SEO DINÁMICO (React 19)
-  // ============================
-  useEffect(() => {
-    // TITLE
-    document.title =
-      "Servicios de Cristalería en Sevilla | Cristales a Medida, Mamparas y Reparaciones Urgentes";
-
-    // META DESCRIPTION
-    let metaDescription = document.querySelector("meta[name='description']");
-    if (!metaDescription) {
-      metaDescription = document.createElement("meta");
-      metaDescription.name = "description";
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.content =
-      "Servicios de cristalería en Sevilla: instalación de cristales a medida, mamparas de baño, espejos personalizados, ventanas de aluminio y PVC, y reparaciones urgentes en el mismo día.";
-
-    // CANONICAL
-    let canonical = document.querySelector("link[rel='canonical']");
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-    canonical.href = "https://cristaleriasevilla.com/servicios";
-
-    // JSON-LD
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.innerHTML = `
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Servicios de Cristalería en Sevilla",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Cristalería Sevilla",
-        "image": "https://cristaleriasevilla.com/favicon.ico",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Sevilla",
-          "addressRegion": "Andalucía",
-          "addressCountry": "ES"
-        },
-        "telephone": "+34955631356",
-        "url": "https://cristaleriasevilla.com/servicios"
-      },
-      "serviceType": [
-        "Cristales a medida",
-        "Mamparas de baño",
-        "Espejos personalizados",
-        "Ventanas de aluminio y PVC",
-        "Reparaciones urgentes"
-      ],
-      "areaServed": {
-        "@type": "City",
-        "name": "Sevilla"
-      },
-      "description": "Instalación profesional de cristales, mamparas, espejos, ventanas y reparaciones urgentes en Sevilla."
-    }
-    `;
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
-  // ============================
-  // JSX
-  // ============================
   return (
     <div className="page">
-      <div className="servicios-bloque">
+      <Helmet>
+        <title>Servicios de Cristalería en Sevilla | Cristalería Zamorano</title>
+        <meta
+          name="description"
+          content="Instalación de cristales a medida, mamparas de baño, espejos y ventanas en Sevilla. Especialistas en cerramientos de vidrio y urgencias 24h."
+        />
+        <link rel="canonical" href="https://cristaleriasevilla.com/servicios" />
+      </Helmet>
 
-        {/* HERO */}
-        <div className="hero-servicios">
-          <img src={heroServicios} alt="Servicios de cristalería" />
-          <div className="hero-servicios-overlay"></div>
-          <div className="hero-servicios-text">
-            <h1 className="fade-in text-gradient-servicios">
-              Servicios de Cristalería en Sevilla
-            </h1>
-            <p className="fade-in-sub">
-              Instalación profesional · Materiales premium · Atención urgente
+      <div className="inicio-bloque">
+        {/* HERO SECTION */}
+        <Hero
+          image={heroServicios}
+          title="Nuestras Soluciones en Vidrio y Cristal"
+          subtitle="Excelencia técnica, precisión artesanal y materiales certificados para proyectos residenciales y comerciales de alto nivel."
+          urgentText="Instalaciones Profesionales Garantizadas en Sevilla"
+        />
+
+        {/* INTRODUCCIÓN */}
+        <section className="intro-section page-content">
+          <div className="section-header-center">
+            <span className="chip">Catálogo de Servicios</span>
+            <h2>Vidrio de Calidad para Cualquier Necesidad</h2>
+            <div className="accent-line"></div>
+          </div>
+          <div className="intro-grid">
+            <p>
+              En <strong>Cristalería Zamorano</strong> desarrollamos soluciones acristaladas que combinan funcionalidad, seguridad y diseño. Fabricamos a medida desde nuestras instalaciones en Alcalá de Guadaíra, suministrando y montando todo tipo de elementos de vidrio en Sevilla capital y su área metropolitana.
             </p>
-
-            <div className="hero-servicios-botones">
-              <a href="tel:+34955631356" className="btn hero-btn-servicios fade-in-btn">
-                Llamar ahora
-              </a>
-              <a
-                href="https://wa.me/34659521144"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn whatsapp hero-whatsapp-servicios fade-in-btn"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* INTRO */}
-        <section className="page-content-servicios">
-          <h2>Expertos en cristales a medida</h2>
-          <p>
-            Ofrecemos instalación profesional de cristales, espejos, mamparas, ventanas
-            de aluminio y PVC, además de reparaciones urgentes en toda Sevilla capital.
-            Trabajamos con materiales de alta calidad y acabados impecables.
-          </p>
-        </section>
-
-        {/* GRID DE SERVICIOS */}
-        <section className="servicios-grid">
-          {[
-            { 
-              title: "Cristales a medida", 
-              desc: "Corte profesional, instalación precisa y sustitución de cristales en cualquier formato. Trabajamos con vidrio templado, laminado y doble acristalamiento para mejorar aislamiento térmico y acústico en hogares y negocios.",
-              img: imgCristales 
-            },
-            { 
-              title: "Mamparas de baño", 
-              desc: "Mamparas de vidrio templado con herrajes de alta calidad. Diseños modernos, instalación limpia y sistemas que garantizan estanqueidad, durabilidad y un acabado elegante en cualquier baño.",
-              img: imgMamparas 
-            },
-            { 
-              title: "Espejos personalizados", 
-              desc: "Fabricamos espejos a medida con cantos pulidos, biselados o con formas especiales. Ideales para baños, vestidores, gimnasios, comercios y proyectos decorativos de alto nivel.",
-              img: imgEspejos 
-            },
-            { 
-              title: "Ventanas aluminio y PVC", 
-              desc: "Instalamos ventanas de aluminio y PVC con doble acristalamiento para maximizar el aislamiento térmico y acústico. Sistemas de alta eficiencia energética y herrajes premium.",
-              img: imgVentanas 
-            },
-            { 
-              title: "Reparaciones urgentes", 
-              desc: "Sustituimos cristales rotos en el mismo día. Servicio rápido, seguro y profesional para escaparates, ventanas, puertas de vidrio y cerramientos dañados.",
-              img: imgReparaciones 
-            },
-            { 
-              title: "Servicio urgente", 
-              desc: "Disponibilidad inmediata en Sevilla para cualquier emergencia con cristales. Furgoneta equipada, materiales listos y respuesta rápida para resolver incidencias sin esperas.",
-              img: imgUrgente 
-            },
-          ].map((item, i) => (
-            <div key={i} className="servicio-card-servicios fade-in">
-              <img src={item.img} alt={item.title} />
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
-            </div>
-          ))}
-        </section>
-
-        {/* SECCIÓN DOS COLUMNAS */}
-        <section className="servicios-dos-columnas">
-          <div className="servicios-textos">
-            <div className="servicio-bloque fade-in">
-              <h2>Instalación profesional</h2>
-              <p>
-                Realizamos montajes limpios, rápidos y con precisión. Más de 30 años de experiencia en cristalería profesional.
-              </p>
-            </div>
-
-            <div className="servicio-bloque fade-in">
-              <h2>Materiales de alta calidad</h2>
-              <p>
-                Vidrio templado, laminado y sistemas de aluminio/PVC de primera categoría para máxima durabilidad.
-              </p>
-            </div>
-
-            <div className="servicio-bloque fade-in">
-              <h2>Atención inmediata</h2>
-              <p>
-                Si necesitas un cristal urgente, estamos disponibles para atenderte en el mismo día en Sevilla.
-              </p>
-            </div>
-          </div>
-
-          <div className="servicios-imagen">
-            <img src={fotoServicios} alt="Cristalería Zamorano en acción" />
+            <p>
+              Si requiere un presupuesto personalizado o la visita de un técnico para la toma de medidas, no dude en <Link to="/contacto">solicitarlo online</Link> o contactarnos por teléfono. Respondemos a todas las consultas comerciales en menos de 24 horas laborables.
+            </p>
           </div>
         </section>
 
-        {/* BOTONES REUBICADOS */}
-        <div className="cta-servicios-botones">
-          <a href="tel:+34955631356" className="btn">Llamar ahora</a>
-          <a
-            href="https://wa.me/34659521144"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn whatsapp"
-          >
-            WhatsApp
-          </a>
-        </div>
+        {/* GRID DETALLADO DE SERVICIOS */}
+        <section className="services-grid-section">
+          <div className="services-showcase-grid">
+            {SERVICIOS_DETALLADOS.map((serv, i) => (
+              <div className="service-card-premium glass-card" key={i}>
+                <div className="card-image-wrapper">
+                  <img src={serv.image} alt={serv.title} />
+                  <span className="card-badge">{serv.tag}</span>
+                </div>
+                <div className="card-content-wrapper">
+                  <h3>{serv.title}</h3>
+                  <p>{serv.description}</p>
+                  <Link to="/contacto" className="card-btn-link">
+                    Solicitar Presupuesto
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" width="14" height="14">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        {/* CONTACTO FINAL */}
-        <section className="cierre-contacto">
+        {/* SECCIÓN URGENTE 24 HORAS */}
+        <section className="urgencies-services-section">
+          <div className="urgency-services-card glass-panel">
+            <div className="urgency-services-content">
+              <span className="chip">Urgencia 24h</span>
+              <h2>Atención Inmediata por Rotura de Cristales</h2>
+              <p>
+                Ofrecemos un servicio de sustitución de lunas y cristales las 24 horas del día, los 365 días del año. Si ha sufrido un robo o accidente en su local comercial, oficina o vivienda en Sevilla, nos desplazamos de inmediato para asegurar el perímetro e instalar un nuevo cristal de seguridad el mismo día.
+              </p>
+              <div className="urgency-ctas">
+                <a href="tel:+34955631356" className="btn shimmer-effect">
+                  955 631 356
+                </a>
+                <a href="https://wa.me/34659521144" target="_blank" rel="noopener noreferrer" className="btn whatsapp">
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          {/* ESCRITORIO */}
+        {/* DETALLE Y BENEFICIOS ADICIONALES */}
+        <section className="cta-imagen diagonal-section">
+          <div className="cta-imagen-grid">
+            <div className="cta-imagen-texto">
+              <span className="chip">Garantía Zamorano</span>
+              <h2 className="cta-titulo-left">Instalaciones Impecables Sin Obra</h2>
+              <p>
+                Nos especializamos en montajes secos y limpios. Nuestro equipo técnico cuenta con herramientas de ventosa de última generación y furgonetas equipadas para el ajuste y colocación de cristales de gran formato de forma rápida, reduciendo las molestias en su rutina diaria o comercial.
+              </p>
+              <p>
+                Trabajamos de la mano con decoradores, arquitectos y clientes particulares en Sevilla, proporcionando un asesoramiento técnico riguroso sobre cargas de viento, aislamiento térmico acústico y requisitos de seguridad contra impactos en vidrios de paso.
+              </p>
+            </div>
+            <div className="cta-imagen-foto">
+              <img
+                src={fotoServicios}
+                alt="Instalación técnica de cristalera de seguridad en Sevilla"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* CTA COMPROMISO */}
+        <CTA
+          title="¿Busca un acabado profesional y garantizado?"
+          description="Consulte con nuestros cristaleros expertos. Desarrollamos cualquier estructura de cristal a medida con herrajes de acero y aluminio pulido."
+          buttonText="Llamar al Servicio Técnico"
+          whatsappText="Consultar Precios"
+        />
+
+        {/* ZONAS DE ACTUACIÓN */}
+        <section className="zones-services-section page-content">
+          <div className="section-header-center">
+            <span className="chip">Área de Actuación</span>
+            <h2>Ubicaciones de Servicio en Sevilla</h2>
+            <div className="accent-line"></div>
+          </div>
+          <div className="zones-links-container">
+            {ZONAS_ATENCION.map((zona) => (
+              <Link to={zona.path} key={zona.path} className="zone-link-item">
+                Cristalería en {zona.nombre}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* CIERRE CON EMAIL */}
+        <section className="cierre-contacto glass-card">
           <p className="texto-desktop">
-            Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, envía un correo a<br />
-            <a
-              href="mailto:cristaleria@cristaleriazamorano.com"
-              className="correo-destacado"
-            >
+            ¿Tiene los detalles de su proyecto y desea adjuntarnos planos o bocetos? Escríbanos a&nbsp;
+            <a href="mailto:cristaleria@cristaleriazamorano.com" className="correo-destacado">
               cristaleria@cristaleriazamorano.com
             </a>
-            <br />
-            y te responderemos a la mayor brevedad posible.
+            &nbsp;y le responderemos con un presupuesto personalizado. También puede rellenar nuestro&nbsp;
+            <Link to="/contacto">formulario de contacto</Link>.
           </p>
-
-          {/* MÓVIL */}
           <p className="texto-mobile">
-            Pide tu presupuesto sin compromiso. Llámanos o, si lo prefieres, contáctanos.<br />
-            <a
-              href="mailto:cristaleria@cristaleriazamorano.com"
-              className="btn correo-mobile"
-            >
-              Enviar correo
+            Presupuestos gratis por email.
+            <br />
+            <a href="mailto:cristaleria@cristaleriazamorano.com" className="btn correo-mobile shimmer-effect">
+              Escribir Correo
             </a>
             <br />
-            <span className="correo-respuesta">
-              Te responderemos a la mayor brevedad posible.
-            </span>
+            <span className="correo-respuesta">Atención y respuesta en menos de 24 horas.</span>
           </p>
-
         </section>
-
       </div>
     </div>
   );

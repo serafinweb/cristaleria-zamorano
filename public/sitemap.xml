@@ -1,49 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Página principal -->
   <url>
-    <loc>https://www.cristaleriasevilla.com/</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
+    <loc>https://cristaleriasevilla.com/</loc>
+    <priority>1.00</priority>
   </url>
-
-  <!-- Página de servicios -->
   <url>
-    <loc>https://www.cristaleriasevilla.com/servicios</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
+    <loc>https://cristaleriasevilla.com/servicios</loc>
+    <priority>0.80</priority>
   </url>
-
-  <!-- Barrios reales -->
   <url>
-    <loc>https://www.cristaleriasevilla.com/camas</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://cristaleriasevilla.com/contacto</loc>
+    <priority>0.80</priority>
   </url>
-
   <url>
-    <loc>https://www.cristaleriasevilla.com/dos-hermanas</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://cristaleriasevilla.com/sobre-nosotros</loc>
+    <priority>0.70</priority>
   </url>
-
   <url>
-    <loc>https://www.cristaleriasevilla.com/los-remedios</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://cristaleriasevilla.com/trabajos</loc>
+    <priority>0.70</priority>
   </url>
-
   <url>
-    <loc>https://www.cristaleriasevilla.com/sevilla-este</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://cristaleriasevilla.com/aviso-legal</loc>
+    <priority>0.30</priority>
   </url>
-
   <url>
-    <loc>https://www.cristaleriasevilla.com/triana</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://cristaleriasevilla.com/politica-de-privacidad</loc>
+    <priority>0.30</priority>
   </url>
-
+  <url>
+    <loc>https://cristaleriasevilla.com/politica-de-cookies</loc>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/camas</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/dos-hermanas</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/los-remedios</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/sevilla-este</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/triana</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/nervion</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/la-macarena</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/san-bernardo</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/los-bermejales</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/bellavista</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/tomares</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/mairena-del-aljarafe</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/bormujos</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/san-juan</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://cristaleriasevilla.com/alcala-de-guadaira</loc>
+    <priority>0.60</priority>
+  </url>
 </urlset>

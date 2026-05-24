@@ -1,83 +1,137 @@
-/* HERO */
-.hero {
-  background-image: url('../assets/hero.png');
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
+/* =====================================================
+   HERO — Componente reutilizable (Crystalline Precision)
+   ===================================================== */
+
+.hero-component {
   position: relative;
+  width: 100%;
+  min-height: clamp(480px, 75vh, 760px);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Evita desbordamientos */
-  width: 100%;
-  overflow: hidden;
-
-  /* Asegura buen padding en móvil */
-  padding: 0 20px;
-}
-
-/* OVERLAY */
-.hero-overlay {
-  background-color: rgba(7, 81, 150, 0.5);
-  padding: 40px;
   text-align: center;
-  color: white;
-  border-radius: 10px;
+  color: #fff;
+  overflow: hidden;
+  background-color: var(--deep-blue);
+  padding: var(--space-md) 0;
+}
 
-  /* Evita que se salga del viewport */
+/* ── Imagen de fondo ── */
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transform: scale(1.05);
+  animation: bgZoom 24s infinite alternate linear;
 }
 
-/* TITULOS */
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+@keyframes bgZoom {
+  0%   { transform: scale(1.05); }
+  100% { transform: scale(1.18); }
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
+/* ── Overlay ── */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 43, 92, 0.88) 0%,
+    rgba(7, 81, 150, 0.6) 100%
+  );
+  z-index: 2;
 }
 
-/* BOTONES */
-.hero-button {
-  background-color: #0077cc;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
+/* ── Contenido ── */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: min(900px, 92%);
+  padding: clamp(32px, 6vw, 64px) clamp(24px, 5vw, 48px);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 30px 60px rgba(13, 43, 92, 0.25);
+  animation: slideUpFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Título ── */
+.hero-title {
+  font-family: var(--font-headline);
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  margin-bottom: clamp(14px, 3vw, 24px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(13, 43, 92, 0.3);
+}
+
+/* ── Subtítulo ── */
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  margin-bottom: clamp(24px, 5vw, 36px);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ── Botones ── */
+.hero-botones {
+  display: flex;
+  gap: clamp(12px, 2.5vw, 18px);
+  justify-content: center;
+  margin-bottom: clamp(16px, 3vw, 24px);
+  flex-wrap: wrap;
+}
+
+.hero-botones .btn {
+  padding: 15px 32px;
+  font-size: 1.05rem;
+}
+
+/* ── Texto urgente ── */
+.hero-subtext {
+  font-family: var(--font-body);
+  font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+  color: #abcfff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
   display: inline-block;
-  margin-top: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.hero-button:hover {
-  background-color: #005fa3;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .hero-overlay {
-    padding: 20px;
+/* ── Breakpoint 480px ── */
+@media (max-width: 480px) {
+  .hero-content {
+    width: 95%;
+    padding: 28px 20px;
+    border-radius: var(--radius-lg);
   }
 
-  .hero h1 {
-    font-size: 32px;
+  .hero-botones {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
-  .hero p {
-    font-size: 16px;
+  .hero-botones .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
   }
-}
-
-/* GLOBAL FIX — elimina scroll lateral en toda la web */
-html, body {
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  overflow-x: hidden;
 }

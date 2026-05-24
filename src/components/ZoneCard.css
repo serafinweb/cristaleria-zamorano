@@ -1,0 +1,74 @@
+.zone-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none !important;
+  color: var(--text-main);
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.zone-card:hover {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--primary), #0a6abf);
+  color: #ffffff !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(7, 81, 150, 0.15);
+}
+
+.zone-card-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.zone-card-icon {
+  font-size: 1.2rem;
+  background: #f0f7ff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.zone-card:hover .zone-card-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.zone-card-title {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #222;
+  font-weight: 600;
+  transition: color 0.25s ease;
+  flex-grow: 1;
+}
+
+.zone-card:hover .zone-card-title {
+  color: #ffffff;
+}
+
+.zone-card-link {
+  font-size: 0.8rem;
+  color: #075196;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.25s ease;
+}
+
+.zone-card:hover .zone-card-link {
+  opacity: 1;
+  transform: translateX(0);
+  color: #ffffff;
+}

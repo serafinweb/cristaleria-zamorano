@@ -1,59 +1,255 @@
-footer.footer {
-  margin-top: 40px;
-  padding: 25px 20px;
-  background: #075196;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 0 0 10px 10px;
-  flex-wrap: wrap;
-  gap: 15px;
+/* =====================================================
+   FOOTER — Cristalería Zamorano
+   Estilo Premium (Crystalline Precision)
+   ===================================================== */
+
+.footer {
+  background: var(--deep-blue);
+  color: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid rgba(7, 81, 150, 0.15);
+  margin-top: 0;
 }
 
-/* IZQUIERDA */
-.footer-left p {
-  margin: 0;
-  color: #ffffff !important; /* blanco */
-  font-size: 0.9rem;
+/* ── Cuerpo: 3 columnas ── */
+.footer-body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(60px, 8vw, 96px) clamp(16px, 4vw, 32px);
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.4fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
 }
 
-/* CENTRO */
-.footer-center {
+@media (max-width: 900px) {
+  .footer-body {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-body {
+    grid-template-columns: 1fr;
+  }
+  .footer-brand {
+    grid-column: auto;
+  }
+}
+
+/* ── Columna base ── */
+.footer-col {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
-/* ENLACES EN AZUL CELESTE */
-.footer-center a {
-  color: #b7dcff !important; /* azul celeste */
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: opacity 0.2s ease, color 0.2s ease;
+.footer-col-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 4px;
 }
 
-.footer-center a:hover {
-  opacity: 0.8;
-  color: #e6f3ff !important; /* celeste más claro */
+/* ── COL 1: Marca ── */
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none !important;
 }
 
-/* DERECHA */
-.footer-horario {
+.footer-logo {
+  height: 52px;
+  width: auto;
+  opacity: 0.95;
+}
+
+.footer-logo-text {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 360px;
   margin: 0;
-  color: #ffffff !important; /* blanco */
-  font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  footer.footer {
+.footer-contact-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.footer-cta--phone {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-cta--phone:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-cta--whatsapp {
+  background: var(--secondary);
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.footer-cta--whatsapp:hover {
+  background: var(--secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* ── COL 2: Navegación ── */
+.footer-nav-col nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-nav-link {
+  color: rgba(255, 255, 255, 0.65) !important;
+  text-decoration: none !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 4px 0;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-nav-link::before {
+  content: '→';
+  font-size: 0.8rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: var(--transition);
+  color: var(--primary);
+}
+
+.footer-nav-link:hover {
+  color: #ffffff !important;
+  padding-left: 8px;
+}
+
+.footer-nav-link:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── COL 3: Info de contacto ── */
+.footer-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-info-icon {
+  color: var(--primary);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.footer-info-list a {
+  color: rgba(255, 255, 255, 0.8) ;
+  text-decoration: none;
+  transition: var(--transition);
+  word-break: break-all;
+}
+
+.footer-info-list a:hover {
+  color: #ffffff;
+}
+
+/* ── Banda inferior ── */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: clamp(20px, 3vw, 30px) clamp(16px, 4vw, 32px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-legal-link {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4) !important;
+  text-decoration: none !important;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.footer-legal-link:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+@media (max-width: 480px) {
+  .footer-bottom {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
-
-  .footer-center {
+  .footer-legal {
     justify-content: center;
+    gap: 16px;
   }
 }

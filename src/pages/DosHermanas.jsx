@@ -63,7 +63,7 @@ export default function DosHermanas() {
     <div className="page">
 
       {/* HERO */}
-      <div className="hero-doshermanas">
+      <div className="hero-dos-hermanas">
         <img
           src={heroDosHermanas}
           alt="Cristalería en Dos Hermanas – instalación de cristales a medida"
@@ -72,7 +72,7 @@ export default function DosHermanas() {
         <div className="hero-text">
 
           {/* TÍTULO — ESCRITORIO: 1 línea / MÓVIL: 3 líneas (via CSS) */}
-          <h1 className="fade-in text-gradient titulo-dh">
+          <h1 className="fade-in text-gradient titulo-dos-hermanas">
             Cristalería en Dos Hermanas
           </h1>
 

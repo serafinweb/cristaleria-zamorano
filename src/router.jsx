@@ -1,43 +1,75 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 
-import Camas from "./pages/Camas";
-import DosHermanas from "./pages/DosHermanas";
-import LosRemedios from "./pages/LosRemedios";
-import SevillaEste from "./pages/SevillaEste";
-import Triana from "./pages/Triana";
-import Inicio from "./pages/Inicio";
+// Páginas estándar
+import Inicio from "./pages/index";
+import Servicios from "./pages/servicios";
+import Contacto from "./pages/contacto";
+import SobreNosotros from "./pages/sobre-nosotros";
+import AvisoLegal from "./pages/aviso-legal";
+import PoliticaPrivacidad from "./pages/politica-de-privacidad";
+import PoliticaCookies from "./pages/politica-de-cookies";
 
-import AvisoLegal from "./pages/AvisoLegal";
-import Privacidad from "./pages/Privacidad";
+// Zonas tradicionales
+import Camas from "./pages/camas";
+import DosHermanas from "./pages/dos-hermanas";
+import LosRemedios from "./pages/los-remedios";
+import SevillaEste from "./pages/sevilla-este";
+import Triana from "./pages/triana";
 
-import Servicios from "./pages/Servicios";
+// Zonas nuevas
+import Nervion from "./pages/nervion";
+import LaMacarena from "./pages/la-macarena";
+import SanBernardo from "./pages/san-bernardo";
+import LosBermejales from "./pages/los-bermejales";
+import Bellavista from "./pages/bellavista";
+import Tomares from "./pages/tomares";
+import MairenaDelAljarafe from "./pages/mairena-del-aljarafe";
+import Bormujos from "./pages/bormujos";
+import SanJuan from "./pages/san-juan";
+import AlcalaDeGuadaira from "./pages/alcala-de-guadaira";
 
-// 👉 IMPORTA LA NUEVA PÁGINA 404
+// Error 404
 import Error404 from "./pages/Error404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-
-    // 👉 ESTA LÍNEA ES LA CLAVE
     errorElement: <Error404 />,
-
     children: [
       { path: "/", element: <Inicio /> },
-      { path: "/triana", element: <Triana /> },
+      
+      // Páginas principales
+      { path: "/servicios", element: <Servicios /> },
+      { path: "/contacto", element: <Contacto /> },
+      { path: "/sobre-nosotros", element: <SobreNosotros /> },
+      
+      // Páginas legales
+      { path: "/aviso-legal", element: <AvisoLegal /> },
+      { path: "/politica-de-privacidad", element: <PoliticaPrivacidad /> },
+      { path: "/politica-de-cookies", element: <PoliticaCookies /> },
+
+      // Zonas tradicionales
       { path: "/camas", element: <Camas /> },
       { path: "/dos-hermanas", element: <DosHermanas /> },
       { path: "/los-remedios", element: <LosRemedios /> },
       { path: "/sevilla-este", element: <SevillaEste /> },
+      { path: "/triana", element: <Triana /> },
 
-      { path: "/servicios", element: <Servicios /> },
+      // Zonas nuevas
+      { path: "/nervion", element: <Nervion /> },
+      { path: "/la-macarena", element: <LaMacarena /> },
+      { path: "/san-bernardo", element: <SanBernardo /> },
+      { path: "/los-bermejales", element: <LosBermejales /> },
+      { path: "/bellavista", element: <Bellavista /> },
+      { path: "/tomares", element: <Tomares /> },
+      { path: "/mairena-del-aljarafe", element: <MairenaDelAljarafe /> },
+      { path: "/bormujos", element: <Bormujos /> },
+      { path: "/san-juan", element: <SanJuan /> },
+      { path: "/alcala-de-guadaira", element: <AlcalaDeGuadaira /> },
 
-      { path: "/aviso-legal", element: <AvisoLegal /> },
-      { path: "/privacidad", element: <Privacidad /> },
-
-      // 👉 OPCIONAL: ruta comodín adicional (no necesaria, pero no molesta)
+      // Ruta comodín para 404
       { path: "*", element: <Error404 /> },
     ],
   },

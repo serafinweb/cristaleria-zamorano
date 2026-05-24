@@ -63,7 +63,7 @@ export default function SevillaEste() {
     <div className="page">
 
       {/* HERO */}
-      <div className="hero-sevillaeste">
+      <div className="hero-sevilla-este">
         <img
           src={heroSevillaEste}
           alt="Cristalería en Sevilla Este – instalación de cristales a medida"
@@ -72,7 +72,7 @@ export default function SevillaEste() {
         <div className="hero-text">
 
           {/* TÍTULO — ESCRITORIO: 1 línea / MÓVIL: 3 líneas (via CSS) */}
-          <h1 className="fade-in text-gradient titulo-se">
+          <h1 className="fade-in text-gradient titulo-sevilla-este">
             Cristalería en Sevilla Este
           </h1>
 

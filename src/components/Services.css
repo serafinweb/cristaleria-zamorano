@@ -1,54 +1,86 @@
-/* ===== SECCIÓN SERVICIOS ===== */
-
-.servicios {
-  padding: 20px 20px;
-  background-color: #f5f5f5;
-  text-align: center;
+.servicios-premium-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px clamp(16px, 4vw, 32px);
+  width: 100%;
 }
 
-/* Eliminamos el título por si acaso */
-.servicios h2 {
-  display: none;
-}
-
-/* ===== GRID ===== */
-
-.grid-servicios {
+.servicios-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 0;
+  gap: 24px;
 }
 
-@media (max-width: 600px) {
-  .grid-servicios {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 900px) {
+  .servicios-grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
-/* ===== ITEM SERVICIO ===== */
-
-.item-servicio {
-  background: white;
-  padding: 20px 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+.servicio-premium-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  height: 100%;
 }
 
-.item-servicio:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+.servicio-premium-card .card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.item-servicio img {
-  width: 60px;
-  margin-bottom: 10px;
+.servicio-premium-card .icon-wrapper {
+  background: rgba(7, 81, 150, 0.08);
+  color: var(--primary);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(7, 81, 150, 0.15);
 }
 
-.item-servicio p {
-  font-size: 14px;
-  color: #075196;
-  font-weight: 500;
+.servicio-premium-card h3 {
+  font-size: 1.35rem;
+  color: var(--deep-blue);
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.servicio-premium-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.card-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none !important;
+  transition: var(--transition);
+}
+
+.card-link-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.card-link-btn:hover {
+  color: var(--primary-hover);
+}
+
+.card-link-btn:hover svg {
+  transform: translateX(4px);
 }

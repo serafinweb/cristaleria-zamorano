@@ -1,16 +1,112 @@
-# React + Vite
+Cristalería Zamorano – Web Corporativa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web moderno, rápido y optimizado para SEO desarrollado con React + Vite, desplegado en Vercel y acelerado mediante Cloudflare CDN.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Tecnologías utilizadas
 
-## React Compiler
+• React 18
+• Vite
+• JavaScript / JSX
+• CSS / Tailwind (si aplica)
+• Vercel (deploy)
+• Cloudflare (DNS, CDN, caché, seguridad)
+• Brevo (envío de emails del formulario)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📦 Instalación y uso en local
+
+Clona el repositorio:
+
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+
+
+Instala dependencias:
+
+npm install
+
+
+Inicia el servidor de desarrollo:
+
+npm run dev
+
+
+El proyecto estará disponible en:
+
+http://localhost:5173
+
+
+---
+
+🛠 Scripts disponibles
+
+Comando	Descripción	
+npm run dev	Inicia el servidor de desarrollo	
+npm run build	Genera la build de producción	
+npm run preview	Previsualiza la build localmente	
+
+
+---
+
+🌐 Deploy
+
+El proyecto está desplegado en Vercel, con:
+
+• Build automática desde npm run build
+• Carpeta de salida: dist/
+• Optimización adicional mediante Cloudflare (caché, HTTPS, seguridad)
+
+
+---
+
+📩 Formulario de contacto
+
+El formulario utiliza Brevo API v3 para enviar correos:
+
+• Sender: gracianozamorano@cristaleriasevilla.com
+• Email Routing gestionado por Cloudflare
+• Envío transaccional mediante endpoint:
+
+
+POST https://api.brevo.com/v3/smtp/email
+
+
+---
+
+📁 Estructura del proyecto
+
+/
+├── public/          # Archivos estáticos (favicon, robots.txt, etc.)
+├── src/
+│   ├── components/  # Componentes reutilizables
+│   ├── pages/       # Páginas principales
+│   ├── assets/      # Imágenes y recursos
+│   ├── App.jsx      # App principal
+│   └── main.jsx     # Punto de entrada
+└── package.json
+
+
+---
+
+🔒 Seguridad
+
+• Repo privado en GitHub
+• Variables sensibles en .env (no incluidas en el repo)
+• Cloudflare activo con:• HTTPS
+• HSTS
+• Bot Fight Mode
+• Cache Everything
+• Email Routing
+
+
+
+---
+
+📄 Licencia
+
+Proyecto privado desarrollado para Cristalería Zamorano.
+No se permite su distribución sin autorización.
